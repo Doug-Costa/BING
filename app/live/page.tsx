@@ -313,163 +313,172 @@ export default function LivePage() {
 
       {/* MAIN GAME BOARD */}
       <section className={`live-board ${connected ? "connected-board" : "disconnected-board"} ${demoMode ? "demo-on" : "demo-off"}`}>
-        {/* LEFT PANEL: ACUMULADO, PRÊMIOS, INFO SQUARES */}
-        <aside className="prizes panel">
-          <div className={`jackpot-live ${prizeState(0, wonLines, drawActive)}`}>
-            <img src="/theme-bingo-show/icons/icon-money-bag.svg" alt="Acumulado" className="jackpot-icon-img" />
-            <div className="jackpot-info-col">
-              <small>ACUMULADO</small>
-              <strong>{money(jackpot)}</strong>
-            </div>
-          </div>
-          {[
-            ["PRÊMIO 1", prizes.line1, 1],
-            ["PRÊMIO 2", prizes.line2, 2],
-            ["PRÊMIO 3", prizes.line3, 3]
-          ].map(item => (
-            <div className={`prize-line ${prizeState(Number(item[2]), wonLines, drawActive)}`} key={item[0]}>
-              <small>{item[0]}</small>
-              <strong>{money(Number(item[1]))}</strong>
-            </div>
-          ))}
-          <div className="info-squares-grid">
-            <div className="info-sq">
-              <Clover className="info-icon green" />
-              <div>
-                <small>SORTEIO</small>
-                <b>{currentDrawIdRef.current ? currentDrawIdRef.current.slice(-6) : "465149"}</b>
+        {/* LEFT/CENTER BLOCK */}
+        <div className="live-left-center-block">
+          <div className="live-left-center-top">
+            {/* LEFT PANEL: ACUMULADO, PRÊMIOS, INFO SQUARES */}
+            <aside className="prizes panel">
+              <div className={`jackpot-live ${prizeState(0, wonLines, drawActive)}`}>
+                <img src="/theme-bingo-show/icons/icon-money-bag.svg" alt="Acumulado" className="jackpot-icon-img" />
+                <div className="jackpot-info-col">
+                  <small>ACUMULADO</small>
+                  <strong>{money(jackpot)}</strong>
+                </div>
               </div>
-            </div>
-            <div className="info-sq">
-              <Heart className="info-icon cyan" />
-              <div>
-                <small>DOAÇÃO</small>
-                <b>R$ 0,20</b>
-              </div>
-            </div>
-            <div className="info-sq">
-              <CalendarDays className="info-icon blue" />
-              <div>
-                <small>DATA</small>
-                <b>{new Date().toLocaleDateString("pt-BR")}</b>
-              </div>
-            </div>
-            <div className="info-sq">
-              <Clock className="info-icon gold" />
-              <div>
-                <small>HORA</small>
-                <b>{new Date().toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit' })}</b>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-        {/* CENTER COLUMN: DRAW STAGE */}
-        <section className="number-stage panel">
-          <div className="stage-header">
-            <h2>★ NÚMERO SORTEADO ★</h2>
-            <span className="upcoming-label">PRÓXIMOS NÚMEROS</span>
-          </div>
-          <div className="stage-body">
-            <div className="mega-ball">
-              <span>{current || "—"}</span>
-            </div>
-            <div className="next-numbers-stack">
-              {(lastBalls.length ? lastBalls : [30, 65, 90]).slice(0, 3).map((number, index) => {
-                const colors = ["red", "gold", "purple"];
-                const color = colors[index % 3];
-                return (
-                  <div className={`next-ball-3d ball-${color}`} key={`${number}-${index}`}>
-                    <span>{number}</span>
+              {[
+                ["PRÊMIO 1", prizes.line1, 1],
+                ["PRÊMIO 2", prizes.line2, 2],
+                ["PRÊMIO 3", prizes.line3, 3]
+              ].map(item => (
+                <div className={`prize-line ${prizeState(Number(item[2]), wonLines, drawActive)}`} key={item[0]}>
+                  <small>{item[0]}</small>
+                  <strong>{money(Number(item[1]))}</strong>
+                </div>
+              ))}
+              <div className="info-squares-grid">
+                <div className="info-sq">
+                  <Clover className="info-icon green" />
+                  <div>
+                    <small>SORTEIO</small>
+                    <b>{currentDrawIdRef.current ? currentDrawIdRef.current.slice(-6) : "465149"}</b>
                   </div>
+                </div>
+                <div className="info-sq">
+                  <Heart className="info-icon cyan" />
+                  <div>
+                    <small>DOAÇÃO</small>
+                    <b>R$ 0,20</b>
+                  </div>
+                </div>
+                <div className="info-sq">
+                  <CalendarDays className="info-icon blue" />
+                  <div>
+                    <small>DATA</small>
+                    <b>{new Date().toLocaleDateString("pt-BR")}</b>
+                  </div>
+                </div>
+                <div className="info-sq">
+                  <Clock className="info-icon gold" />
+                  <div>
+                    <small>HORA</small>
+                    <b>{new Date().toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit' })}</b>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            {/* CENTER COLUMN: DRAW STAGE */}
+            <section className="number-stage panel">
+              <div className="stage-header">
+                <h2>★ NÚMERO SORTEADO ★</h2>
+                <span className="upcoming-label">PRÓXIMOS NÚMEROS</span>
+              </div>
+              <div className="stage-body">
+                <div className="mega-ball">
+                  <span>{current || "—"}</span>
+                </div>
+                <div className="next-numbers-stack">
+                  {(lastBalls.length ? lastBalls : [30, 65, 90]).slice(0, 3).map((number, index) => {
+                    const colors = ["red", "gold", "purple"];
+                    const color = colors[index % 3];
+                    return (
+                      <div className={`next-ball-3d ball-${color}`} key={`${number}-${index}`}>
+                        <span>{number}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="stage-footer">
+                <div className="next-timer-box">
+                  <Hourglass className="timer-icon" />
+                  <span>PRÓXIMO NÚMERO EM</span>
+                  <b className="live-timer-countdown">00:30</b>
+                </div>
+                <div className="bingo-cage-graphic">
+                  <div className="cage-base">
+                    <span className="cage-ball cb1">15</span>
+                    <span className="cage-ball cb2">42</span>
+                    <span className="cage-ball cb3">88</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          {/* BOTTOM FULL-WIDTH COLUMN: ÚLTIMOS NÚMEROS SORTEADOS */}
+          <section className="ball-history panel">
+            <h2>☘ ÚLTIMOS NÚMEROS SORTEADOS ☘</h2>
+            <div className="balls-90-grid">
+              {Array.from({ length: 90 }, (_, index) => index + 1).map(number => {
+                const isDrawn = ballSet.has(number);
+                const isCurrent = number === current;
+                const colorClass = getBallColorClass(number);
+                return (
+                  <span
+                    className={`ball-90-item ${isCurrent ? "current" : isDrawn ? `drawn ${colorClass}` : "undrawn"}`}
+                    key={number}
+                  >
+                    {number}
+                  </span>
                 );
               })}
             </div>
-          </div>
-          <div className="stage-footer">
-            <div className="next-timer-box">
-              <Hourglass className="timer-icon" />
-              <span>PRÓXIMO NÚMERO EM <b>00:30</b></span>
-            </div>
-            <div className="bingo-cage-graphic">
-              <div className="cage-base">
-                <span className="cage-ball cb1">15</span>
-                <span className="cage-ball cb2">42</span>
-                <span className="cage-ball cb3">88</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* RIGHT TOP COLUMN: DOADOR / RANKING TABLE */}
-        <aside className="players panel">
-          <div className="players-head">
-            <b>CUPOM</b>
-            <b>DOADOR</b>
-            <b>FALTAM <span className="head-rings"><i/><i/><i/><i/><i/></span></b>
-          </div>
-          {orderedTopWinners.length ? (
-            orderedTopWinners.map(({ item, left, key, missing }) => (
-              <div className="player-row" key={key}>
-                <b className="cupom-code">{item.ticketId ? String(item.ticketId).slice(-6).padStart(6, "0") : "000476"}</b>
-                <strong className="doador-name">
-                  {item.playerName || "Jogador"}
-                  {item.targetPrize ? <small>{prizeLabel(item.targetPrize)}</small> : null}
-                </strong>
-                <span className="missing-pills">
-                  {missing.length ? (
-                    missing.slice(0, 4).map(number => <i key={number}>{String(number).padStart(2, "0")}</i>)
-                  ) : (
-                    <i>{left}</i>
-                  )}
-                </span>
-              </div>
-            ))
-          ) : (
-            <div className="top-empty">Aguardando jogadores próximos de ganhar...</div>
-          )}
-        </aside>
-
-        {/* RIGHT BOTTOM COLUMN: MINHAS CARTELAS */}
-        {!!orderedCards.length && (
-          <section className="my-cards panel">
-            <h2>☘ MINHAS CARTELAS ☘</h2>
-            <div className="cards-grid-2x2">
-              {orderedCards.map((card, index) => (
-                <BingoCard card={card.numbers} index={index} balls={ballSet} urgent={remaining(card.numbers, ballSet) <= 2} key={card.id} />
-              ))}
-            </div>
           </section>
-        )}
+        </div>
 
-        {/* BOTTOM FULL-WIDTH COLUMN: ÚLTIMOS NÚMEROS SORTEADOS */}
-        <section className="ball-history panel">
-          <h2>☘ ÚLTIMOS NÚMEROS SORTEADOS ☘</h2>
-          <div className="balls-90-grid">
-            {Array.from({ length: 90 }, (_, index) => index + 1).map(number => {
-              const isDrawn = ballSet.has(number);
-              const isCurrent = number === current;
-              const colorClass = getBallColorClass(number);
-              return (
-                <span
-                  className={`ball-90-item ${isCurrent ? "current" : isDrawn ? `drawn ${colorClass}` : "undrawn"}`}
-                  key={number}
-                >
-                  {number}
-                </span>
-              );
-            })}
-          </div>
-        </section>
+        {/* RIGHT COLUMN */}
+        <div className="live-right-block">
+          {/* RIGHT TOP COLUMN: DOADOR / RANKING TABLE */}
+          <aside className="players panel">
+            <div className="players-head">
+              <b>CUPOM</b>
+              <b>DOADOR</b>
+              <b>FALTAM <span className="head-rings"><i/><i/><i/><i/><i/></span></b>
+            </div>
+            {orderedTopWinners.length ? (
+              orderedTopWinners.map(({ item, left, key, missing }) => (
+                <div className="player-row" key={key}>
+                  <b className="cupom-code">{item.ticketId ? String(item.ticketId).slice(-6).padStart(6, "0") : "000476"}</b>
+                  <strong className="doador-name">
+                    {item.playerName || "Jogador"}
+                    {item.targetPrize ? <small>{prizeLabel(item.targetPrize)}</small> : null}
+                  </strong>
+                  <span className="missing-pills">
+                    {missing.length ? (
+                      missing.slice(0, 4).map(number => <i key={number}>{String(number).padStart(2, "0")}</i>)
+                    ) : (
+                      <i>{left}</i>
+                    )}
+                  </span>
+                </div>
+              ))
+            ) : (
+              <div className="top-empty">Aguardando jogadores próximos de ganhar...</div>
+            )}
+          </aside>
 
-        {/* BOTTOM RIGHT CORNER ACCENT */}
-        <div className="luck-accent-banner">
-          <div className="luck-text">
-            <span>AQUI É</span>
-            <strong>SORTE!</strong>
-            <small>Todo dia!</small>
+          {/* RIGHT BOTTOM COLUMN: MINHAS CARTELAS */}
+          {!!orderedCards.length && (
+            <section className="my-cards panel">
+              <h2>☘ MINHAS CARTELAS ☘</h2>
+              <div className="cards-grid-2x2">
+                {orderedCards.map((card, index) => (
+                  <BingoCard card={card.numbers} index={index} balls={ballSet} urgent={remaining(card.numbers, ballSet) <= 2} key={card.id} />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* BOTTOM RIGHT CORNER ACCENT */}
+          <div className="luck-accent-banner">
+            <div className="luck-text">
+              <span>AQUI É</span>
+              <strong>SORTE!</strong>
+              <small>Todo dia!</small>
+            </div>
+            <div className="luck-clover">🍀</div>
           </div>
-          <div className="luck-clover">🍀</div>
         </div>
       </section>
 

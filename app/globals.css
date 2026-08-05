@@ -158,9 +158,9 @@
   .split-badge { font-size: 18px; }
   .won-jackpot { font-size: 23px; }
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--white);font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at 50% -15%,#0b2f77 0,transparent 42%),linear-gradient(135deg,#01040f,#02091f 55%,#020617);min-height:100vh}button,input,select{font:inherit}button,a{color:inherit}a{text-decoration:none}button{cursor:pointer}.site-shell{width:min(1540px,calc(100% - 34px));margin:auto;position:relative;z-index:1;padding-bottom:24px}.ambient{position:fixed;inset:0;overflow:hidden;pointer-events:none}.ambient:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(8,127,252,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(8,127,252,.025) 1px,transparent 1px);background-size:42px 42px}.ambient i{position:absolute;width:380px;height:380px;border-radius:50%;filter:blur(120px);background:#064ec7;opacity:.16;animation:drift 14s ease-in-out infinite}.ambient.live-ambient i{animation:none}.ambient i:nth-child(2){right:0;top:30%;background:#7000c7;animation-delay:-5s}.ambient i:nth-child(3){left:40%;bottom:-20%;background:#006cd8;animation-delay:-9s}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--white);font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at 50% -15%,#001b4a 0%,transparent 60%),linear-gradient(135deg,#00071a,#001236 55%,#000a20) !important;min-height:100vh}button,input,select{font:inherit}button,a{color:inherit}a{text-decoration:none}button{cursor:pointer}.site-shell{width:min(1540px,calc(100% - 34px));margin:auto;position:relative;z-index:1;padding-bottom:24px}.ambient{position:fixed;inset:0;overflow:hidden;pointer-events:none}.ambient:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(8,127,252,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(8,127,252,.025) 1px,transparent 1px);background-size:42px 42px}.ambient i{position:absolute;width:380px;height:380px;border-radius:50%;filter:blur(120px);background:#064ec7;opacity:.16;animation:drift 14s ease-in-out infinite}.ambient.live-ambient i{animation:none}.ambient i:nth-child(2){right:0;top:30%;background:#7000c7;animation-delay:-5s}.ambient i:nth-child(3){left:40%;bottom:-20%;background:#006cd8;animation-delay:-9s}
 .header{height:170px;display:grid;grid-template-columns:360px 1fr 340px;align-items:center;gap:30px}.brand{display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 0 16px #087ffc);transform:rotate(-1deg)}.brand-lines{display:flex;flex-direction:column;align-items:center;line-height:.72}.brand strong,.brand em{font:900 64px/1 "Barlow Condensed";letter-spacing:2px;font-style:normal;-webkit-text-stroke:2px #dff7ff;text-shadow:0 3px 0 #003b91,0 7px 0 #001d51,0 0 8px #2ad9ff;background:linear-gradient(#fff,#42dbff 35%,#087ffc 60%,#fff 66%,#0477e6 74%);color:transparent;background-clip:text}.brand em{font-size:48px;background:linear-gradient(#fff598,#ffc400 42%,#f48a00 70%,#fff1a0 76%,#e98100);background-clip:text;-webkit-text-stroke:2px #fff0a7;text-shadow:0 4px 0 #803500,0 0 10px #ffc400}.brand-star{font-size:30px;color:var(--gold);text-shadow:0 0 8px var(--gold)}.brand-star.right{transform:translateY(18px)}.nav{display:flex;justify-content:center;gap:25px}.nav a{display:flex;flex-direction:column;align-items:center;gap:8px;text-transform:uppercase;font:700 13px "Barlow Condensed";position:relative;white-space:nowrap}.nav svg{width:26px;color:#e9f3ff}.nav a:hover,.nav a:first-child{color:var(--gold)}.nav a:hover svg,.nav a:first-child svg{color:var(--gold);filter:drop-shadow(0 0 6px var(--gold))}.nav a:after{content:"";height:2px;width:0;background:var(--gold);position:absolute;bottom:-13px;transition:.25s}.nav a:hover:after,.nav a:first-child:after{width:32px}.account{display:flex;align-items:center;justify-content:flex-end;gap:10px}.btn{border:0;border-radius:8px;padding:14px 22px;font-weight:900;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:.25s}.btn svg{width:20px}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.btn-gold{color:#081029;background:linear-gradient(180deg,#ffe44b,#ffc400 55%,#f4a500);box-shadow:inset 0 1px #fff7a5,0 7px 22px rgba(255,196,0,.22)}.btn-blue{background:linear-gradient(#078df8,#0048a7);border:1px solid #24c5ff}.btn-ghost{border:1px solid #1667b5;background:#06142e}.btn.compact{padding:11px 15px}.btn.wide{width:100%}.user-chip{display:flex;gap:10px;align-items:center}.user-chip>svg{padding:8px;width:40px;height:40px;border:1px solid var(--cyan);border-radius:50%}.user-chip span{display:flex;flex-direction:column;font-size:12px}.user-chip small{color:var(--gold);margin-top:3px}.icon-button,.menu-button{background:transparent;border:0}.menu-button{display:none}
-.panel{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(140deg,rgba(7,30,76,.92),rgba(1,8,28,.96));box-shadow:var(--shadow);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.58fr .95fr;gap:16px}.hero{height:355px;border:1px solid var(--line);border-radius:var(--radius);position:relative;overflow:hidden;background-image:linear-gradient(90deg,rgba(2,8,30,.22),rgba(1,6,20,.04)),url("/assets/bingo-hero.png");background-size:cover;background-position:center;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(1,7,26,.97) 0,rgba(2,14,45,.77) 38%,transparent 68%)}.hero-content{position:relative;z-index:3;padding:35px 0 0 45px}.eyebrow{display:flex;align-items:center;gap:7px;color:#b9d4ff;font:800 15px "Barlow Condensed";letter-spacing:1.6px;margin:0 0 8px}.eyebrow svg{width:18px;color:var(--gold)}.hero h1{font:italic 900 48px/.82 "Barlow Condensed";text-transform:uppercase;margin:0;color:#eff6ff;letter-spacing:-1px}.hero h1 em{font-style:italic;color:var(--gold);font-size:54px;text-shadow:0 2px #9c5a00}.hero h1 span{font-size:74px}.hero-content>p:not(.eyebrow){text-transform:uppercase;font:italic 800 22px "Barlow Condensed";margin:15px 0}.hero-content>p b{color:var(--gold)}.hero-button{font-size:15px;padding:14px 18px}.hero-dots{position:absolute;z-index:5;bottom:14px;left:45%;display:flex;gap:9px}.hero-dots i{width:8px;height:8px;border-radius:50%;background:#cbe1ff}.hero-dots i.active{background:var(--gold);box-shadow:0 0 8px var(--gold)}.float-ball{position:absolute!important;z-index:4}.b1{right:42%;top:35px}.b2{right:27%;top:78px}.b3{right:48%;bottom:53px}.ball{width:66px;height:66px;display:grid;place-items:center;border-radius:50%;font:900 34px "Barlow Condensed";color:white;border:2px solid rgba(255,255,255,.8);box-shadow:inset -8px -10px 12px rgba(0,0,0,.3),inset 7px 7px 10px rgba(255,255,255,.42),0 0 15px currentColor;text-shadow:0 3px 2px rgba(0,0,0,.45)}.ball.blue{background:radial-gradient(circle at 35% 25%,#6de8ff,#087ffc 48%,#032d88);color:#64dcff}.ball.red{background:radial-gradient(circle at 35% 25%,#ff8b79,#e52b21 48%,#761006);color:#ff4939}.ball.gold{background:radial-gradient(circle at 35% 25%,#fff095,#f6b906 48%,#8a5200);color:#ffd21f}.ball.purple{background:radial-gradient(circle at 35% 25%,#dc9cff,#8e35db 48%,#43116e);color:#bb72ff}.ball{color:white}.float-ball{animation:float 4s ease-in-out infinite}.b2{animation-delay:-1.5s}.b3{animation-delay:-2.7s}
+.panel{border:1px solid #00f3ff!important;border-radius:var(--radius);background:linear-gradient(140deg,rgba(0,27,74,0.95),rgba(0,10,32,0.98))!important;box-shadow:0 0 10px rgba(0,243,255,.5),inset 0 0 20px rgba(0,243,255,.1)!important;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.58fr .95fr;gap:16px}.hero{height:355px;border:1px solid var(--line);border-radius:var(--radius);position:relative;overflow:hidden;background-image:linear-gradient(90deg,rgba(2,8,30,.22),rgba(1,6,20,.04)),url("/assets/bingo-hero.png");background-size:cover;background-position:center;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(1,7,26,.97) 0,rgba(2,14,45,.77) 38%,transparent 68%)}.hero-content{position:relative;z-index:3;padding:35px 0 0 45px}.eyebrow{display:flex;align-items:center;gap:7px;color:#b9d4ff;font:800 15px "Barlow Condensed";letter-spacing:1.6px;margin:0 0 8px}.eyebrow svg{width:18px;color:var(--gold)}.hero h1{font:italic 900 48px/.82 "Barlow Condensed";text-transform:uppercase;margin:0;color:#eff6ff;letter-spacing:-1px}.hero h1 em{font-style:italic;color:var(--gold);font-size:54px;text-shadow:0 2px #9c5a00}.hero h1 span{font-size:74px}.hero-content>p:not(.eyebrow){text-transform:uppercase;font:italic 800 22px "Barlow Condensed";margin:15px 0}.hero-content>p b{color:var(--gold)}.hero-button{font-size:15px;padding:14px 18px}.hero-dots{position:absolute;z-index:5;bottom:14px;left:45%;display:flex;gap:9px}.hero-dots i{width:8px;height:8px;border-radius:50%;background:#cbe1ff}.hero-dots i.active{background:var(--gold);box-shadow:0 0 8px var(--gold)}.float-ball{position:absolute!important;z-index:4}.b1{right:42%;top:35px}.b2{right:27%;top:78px}.b3{right:48%;bottom:53px}.ball{width:66px;height:66px;display:grid;place-items:center;border-radius:50%;font:900 34px "Barlow Condensed";color:white;border:2px solid rgba(255,255,255,.8);box-shadow:inset -8px -10px 12px rgba(0,0,0,.3),inset 7px 7px 10px rgba(255,255,255,.42),0 0 15px currentColor;text-shadow:0 3px 2px rgba(0,0,0,.45)}.ball.blue{background:radial-gradient(circle at 35% 25%,#6de8ff,#087ffc 48%,#032d88);color:#64dcff}.ball.red{background:radial-gradient(circle at 35% 25%,#ff8b79,#e52b21 48%,#761006);color:#ff4939}.ball.gold{background:radial-gradient(circle at 35% 25%,#fff095,#f6b906 48%,#8a5200);color:#ffd21f}.ball.purple{background:radial-gradient(circle at 35% 25%,#dc9cff,#8e35db 48%,#43116e);color:#bb72ff}.ball{color:white}.float-ball{animation:float 4s ease-in-out infinite}.b2{animation-delay:-1.5s}.b3{animation-delay:-2.7s}
 .panel-title{height:52px;display:flex;justify-content:space-between;align-items:center;padding:0 16px;border-bottom:1px solid rgba(35,136,255,.4)}.panel-title h2{display:flex;align-items:center;gap:10px;margin:0;text-transform:uppercase;font:800 20px "Barlow Condensed"}.panel-title svg{width:25px;color:#d9ebff}.panel-title a,.panel-title button{background:linear-gradient(#062f68,#02112f);border:1px solid var(--line);border-radius:6px;padding:7px 12px;font:700 11px Inter;text-transform:uppercase;display:flex;align-items:center}.panel-title a svg{width:14px}.draw-row{min-height:100px;display:grid;grid-template-columns:72px 1fr 145px 24px;align-items:center;gap:11px;padding:10px 14px;border-bottom:1px solid rgba(23,103,200,.32);transition:.2s}.draw-row:hover{background:rgba(9,92,208,.12)}.draw-row:last-child{border:0}.draw-row .ball{width:62px;height:62px}.draw-copy{display:flex;flex-direction:column}.draw-copy h3{margin:0;font:800 16px "Barlow Condensed";text-transform:uppercase}.draw-copy strong{font:800 27px "Barlow Condensed";color:var(--gold)}.draw-copy small{font-size:11px}.countdown{display:flex;background:#01091b;border:1px solid #245080;border-radius:6px;padding:8px;justify-content:center}.countdown span{display:flex;flex-direction:column;align-items:center;min-width:39px;position:relative}.countdown span+span:before{content:":";position:absolute;left:-3px;font-weight:900;font-size:18px}.countdown b{font-size:20px}.countdown small{font-size:8px}.row-action svg{width:20px}
 .benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:14px 0}.benefit{height:104px;border:1px solid #076de3;border-radius:12px;background:linear-gradient(120deg,#031332,#061842,#01091c);display:flex;align-items:center;padding:12px 28px;gap:20px;box-shadow:var(--shadow);text-transform:uppercase}.benefit>svg{width:57px;height:57px;color:#79d6ff;filter:drop-shadow(0 0 7px #087ffc)}.benefit div{display:flex;flex-direction:column;gap:4px}.benefit strong{font:800 18px "Barlow Condensed"}.benefit small{font-size:12px;text-transform:none}.benefit.jackpot svg{color:var(--gold);filter:drop-shadow(0 0 7px var(--gold))}.benefit.jackpot small{color:var(--gold);font-weight:800;text-transform:uppercase}.benefit.jackpot strong{color:#ffd04a;font-size:29px}
 .lower-grid{display:grid;grid-template-columns:1.45fr .98fr .77fr;grid-template-rows:230px;gap:16px}.winners{grid-row:span 2}.winner-row{min-height:54px;padding:7px 18px;display:grid;grid-template-columns:48px 1fr 1.4fr 1fr .75fr;align-items:center;border-bottom:1px solid rgba(38,102,183,.28);font-size:13px}.winner-row b{font-size:20px;color:var(--gold)}.winner-row small{text-align:right}.avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#f2b36c,#7d3418);border:2px solid #8cbdeb;font-weight:900}.av2{background:linear-gradient(135deg,#8ed7ff,#284b73)}.av3{background:linear-gradient(135deg,#dc9f6e,#5a281e)}.crowd{height:100px;background:linear-gradient(rgba(0,25,84,.4),rgba(0,6,22,.95)),radial-gradient(ellipse at bottom,#005dcc 0,transparent 65%);display:flex;justify-content:space-around;align-items:center}.crowd div{display:grid;grid-template-columns:42px 1fr;grid-template-rows:1fr 1fr;align-items:center}.crowd svg{grid-row:span 2;width:34px;height:34px;color:#81daff;margin-right:9px}.crowd small{text-transform:uppercase;font-size:9px}.buy-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:radial-gradient(circle at 80%,#0755a7,transparent 50%),linear-gradient(135deg,#04184b,#061d58 60%,#020923)}.buy-card h2{font:italic 900 36px/.9 "Barlow Condensed";text-transform:uppercase;margin:7px 0}.buy-card p{margin:8px 0 15px}.ticket-stack{position:absolute;right:8px;bottom:-35px;transform:rotate(8deg)}.ticket-stack i{position:absolute;right:0;bottom:0;width:85px;height:145px;border:3px solid #ffd443;border-radius:7px;background:repeating-linear-gradient(#f3f5ed 0 22px,#112656 23px 25px)}.ticket-stack i:nth-child(2){transform:rotate(-15deg);right:35px}.ticket-stack i:nth-child(3){transform:rotate(-28deg);right:68px}.promo-card{grid-row:span 2;border:1px solid var(--gold);border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle,#0e34a0 0,#03164e 45%,#060423 75%);overflow:hidden;position:relative}.promo-card:before,.promo-card:after{content:"";position:absolute;width:2px;height:160%;background:linear-gradient(transparent,var(--gold),transparent);transform:rotate(55deg);animation:sweep 5s linear infinite}.promo-card:after{animation-delay:-2.5s}.promo-card>span{font-size:46px;color:var(--gold)}.promo-card h2{font:900 48px/.67 "Barlow Condensed";margin:0;z-index:1;color:#52dfff;text-shadow:0 0 11px #007fff}.promo-card h2 em{color:var(--gold);font-style:normal}.promo-card p{text-transform:uppercase;font:700 17px "Barlow Condensed";z-index:1}.promo-card p b{color:var(--gold)}.neon-button{z-index:1;padding:14px 25px;border:2px solid #f172ff;border-radius:8px;text-transform:uppercase;font-weight:900;color:#ff7cf5;box-shadow:0 0 15px #9e00ff,inset 0 0 15px rgba(158,0,255,.4);animation:pulse 2s ease-in-out infinite}footer{margin-top:30px;border-top:1px solid #123d75;padding:25px 0;text-align:center;color:var(--muted);font-size:12px}.footer-logo{font:900 25px "Barlow Condensed";color:#47c7ff}.footer-logo em{color:var(--gold);font-style:normal}
@@ -181,92 +181,452 @@
 .sound-toggle-btn:hover{transform:scale(1.06);box-shadow:0 0 22px rgba(0,213,255,.8)}
 
 .live-login{display:flex;justify-content:center;align-items:center;gap:12px;padding:9px;background:#652100;border:1px solid #ff8c2b;border-radius:8px;margin-bottom:10px}.live-login button{background:var(--gold);color:#111;border:0;padding:7px 16px;border-radius:6px;font-weight:800}
-.live-board{display:grid;grid-template-columns:.9fr 1.4fr 1.2fr;gap:12px;margin-bottom:18px}
+.live-board {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  margin-bottom: 18px;
+  align-items: start;
+}
+.live-left-center-block,
+.live-right-block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.live-left-center-top {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 15px;
+}
 
 /* LEFT PANEL: PRIZES & ACUMULADO */
-.prizes.panel{display:flex;flex-direction:column;gap:10px;padding:12px;background:linear-gradient(180deg,#062664,#021035);border:2px solid #0088ff;border-radius:14px;box-shadow:0 0 20px rgba(0,136,255,.25)}
-.jackpot-live{border:3px solid #00d5ff;border-radius:14px;background:radial-gradient(circle at 30% 30%,#0959be,#03286e);display:flex;align-items:center;gap:14px;padding:12px 16px;box-shadow:inset 0 0 25px rgba(0,213,255,.35),0 0 18px rgba(0,170,255,.25)}
-.jackpot-icon-img{width:48px;height:48px;filter:drop-shadow(0 0 10px #ffd21f)}
-.jackpot-info-col{display:flex;flex-direction:column}
-.jackpot-info-col small{font:800 15px "Barlow Condensed";color:#aee2ff;letter-spacing:1px}
-.jackpot-info-col strong{font:900 36px/1 "Barlow Condensed";color:#ffd21f;text-shadow:0 0 14px #ffcf12}
-.prize-line{border:2px solid #0088ff;border-radius:12px;background:linear-gradient(180deg,#0747a1,#042767);display:flex;align-items:center;justify-content:space-between;padding:10px 18px;box-shadow:inset 0 0 15px rgba(0,136,255,.2)}
-.prize-line small{font:800 16px "Barlow Condensed";color:#bfe3ff;letter-spacing:.5px}
-.prize-line strong{font:900 24px/1 "Barlow Condensed";color:#ffffff;text-shadow:0 0 8px rgba(255,255,255,.4)}
+.prizes.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+}
+.jackpot-live {
+  border: 3px solid #ffd700;
+  border-radius: 14px;
+  background: radial-gradient(circle at 30% 30%, #b8860b, #5c4000);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  box-shadow: inset 0 0 25px rgba(255,215,0,0.35), 0 0 18px rgba(255,215,0,0.25);
+}
+.jackpot-icon-img {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 0 10px #ffd21f);
+}
+.jackpot-info-col {
+  display: flex;
+  flex-direction: column;
+}
+.jackpot-info-col small {
+  font: 800 15px "Barlow Condensed";
+  color: #fff8bd;
+  letter-spacing: 1px;
+}
+.jackpot-info-col strong {
+  font: 900 36px/1 "Barlow Condensed";
+  color: #ffd700;
+  text-shadow: 0 0 14px #ffcf12;
+}
+.prize-line {
+  border: 2px solid #00f3ff;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #052c69, #02112d);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  box-shadow: inset 0 0 15px rgba(0, 243, 255, 0.2);
+}
+.prize-line small {
+  font: 800 16px "Barlow Condensed";
+  color: #aee2ff;
+  letter-spacing: .5px;
+}
+.prize-line strong {
+  font: 900 24px/1 "Barlow Condensed";
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255,255,255,.4);
+}
 
-.info-squares-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}
-.info-sq{background:#041c4a;border:1.5px solid #1674db;border-radius:10px;padding:8px 10px;display:flex;align-items:center;gap:8px}
-.info-sq .info-icon{width:22px;height:22px;flex-shrink:0}
-.info-sq .info-icon.green{color:#5eff6e}.info-sq .info-icon.cyan{color:#44f4ff}.info-sq .info-icon.blue{color:#54aaff}.info-sq .info-icon.gold{color:#ffd21f}
-.info-sq div{display:flex;flex-direction:column}
-.info-sq small{font:800 10px "Barlow Condensed";color:#75adff;letter-spacing:.5px}
-.info-sq b{font:900 14px "Barlow Condensed";color:#ffffff}
+.info-squares-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: auto;
+}
+.info-sq {
+  background: #000c24;
+  border: 1.5px solid #00f3ff;
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.info-sq .info-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.info-sq .info-icon.green { color: #5eff6e; }
+.info-sq .info-icon.cyan { color: #44f4ff; }
+.info-sq .info-icon.blue { color: #54aaff; }
+.info-sq .info-icon.gold { color: #ffd21f; }
+.info-sq div { display: flex; flex-direction: column; }
+.info-sq small { font: 800 10px "Barlow Condensed"; color: #75adff; letter-spacing: .5px; }
+.info-sq b { font: 900 14px "Barlow Condensed"; color: #ffffff; }
 
 /* CENTER COLUMN: DRAW STAGE */
-.number-stage.panel{position:relative;padding:14px;background:radial-gradient(circle at 50% 45%,#0e65d1 0%,#063185 55%,#021238 90%);border:3px solid #00aaff;border-radius:16px;box-shadow:0 0 30px rgba(0,170,255,.35);display:flex;flex-direction:column}
-.stage-header{display:flex;justify-content:space-between;align-items:center;color:#fff}
-.stage-header h2{font:900 22px "Barlow Condensed";margin:0;letter-spacing:1px}
-.stage-header .upcoming-label{font:800 12px "Barlow Condensed";color:#ffd21f;letter-spacing:1px}
-.stage-body{display:flex;align-items:center;justify-content:space-around;margin:15px 0}
-.mega-ball{width:310px;height:310px;border-radius:50%;border:8px solid #82ebff;background:radial-gradient(circle at 35% 30%,#157bff 0%,#033682 65%,#001236 100%);box-shadow:0 0 35px #00d5ff,inset 0 0 60px #0060d4;display:grid;place-items:center;position:relative}
-.mega-ball:before{content:"";position:absolute;inset:-18px;border:5px dotted #a8f5ff;border-radius:50%;animation:spin 18s linear infinite}
-.mega-ball span{font:900 170px/1 "Barlow Condensed";color:#ffffff;text-shadow:0 8px 16px rgba(0,0,0,.6)}
-.next-numbers-stack{display:flex;flex-direction:column;gap:14px;align-items:center}
-.next-ball-3d{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font:900 28px "Barlow Condensed";color:#ffffff;text-shadow:0 2px 4px #000;box-shadow:0 4px 12px rgba(0,0,0,.5);transition:transform .25s}
-.ball-red{background:radial-gradient(circle at 35% 30%,#ff5252,#c62828 70%,#6a0000);border:3px solid #ff8a8a;box-shadow:0 0 16px rgba(255,82,82,.6)}
-.ball-gold{background:radial-gradient(circle at 35% 30%,#ffe082,#ffb300 70%,#8f6000);border:3px solid #fff59d;box-shadow:0 0 16px rgba(255,179,0,.6)}
-.ball-purple{background:radial-gradient(circle at 35% 30%,#e040fb,#aa00ff 70%,#4a0072);border:3px solid #ea80fc;box-shadow:0 0 16px rgba(170,0,255,.6)}
-.ball-blue{background:radial-gradient(circle at 35% 30%,#40c4ff,#0091ea 70%,#004080);border:3px solid #80d8ff;box-shadow:0 0 16px rgba(0,145,234,.6)}
-.ball-green{background:radial-gradient(circle at 35% 30%,#69f0ae,#00c853 70%,#005020);border:3px solid #b9f6ca;box-shadow:0 0 16px rgba(0,200,83,.6)}
+.number-stage.panel {
+  position: relative;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.stage-header h2 {
+  font: 900 22px "Barlow Condensed";
+  margin: 0;
+  letter-spacing: 1px;
+}
+.stage-header .upcoming-label {
+  font: 800 12px "Barlow Condensed";
+  color: #ffd21f;
+  letter-spacing: 1px;
+}
+.stage-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+.mega-ball {
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 8px solid #82ebff;
+  background: radial-gradient(circle at 35% 30%, #157bff 0%, #033682 65%, #001236 100%);
+  box-shadow: 0 0 35px #00d5ff, inset 0 0 60px #0060d4;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.mega-ball:before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border: 5px dotted #a8f5ff;
+  border-radius: 50%;
+  animation: spin 18s linear infinite;
+}
+.mega-ball span {
+  font: 900 170px/1 "Barlow Condensed";
+  color: #ffffff;
+  text-shadow: 0 8px 16px rgba(0,0,0,.6);
+}
+.next-numbers-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+.next-ball-3d {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font: 900 28px "Barlow Condensed";
+  color: #ffffff;
+  text-shadow: 0 2px 4px #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,.5);
+  transition: transform .25s;
+}
 
-.stage-footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
-.next-timer-box{display:flex;align-items:center;gap:10px;border:2px solid #ffcc00;border-radius:12px;background:rgba(4,22,60,.85);padding:10px 16px;color:#fff;font:800 15px "Barlow Condensed";box-shadow:0 0 16px rgba(255,204,0,.25)}
-.timer-icon{width:22px;height:22px;color:#ffd21f;animation:float 3s ease-in-out infinite}
-.next-timer-box b{font-size:24px;color:#ffd21f;margin-left:4px;text-shadow:0 0 10px #ffb300}
-.bingo-cage-graphic{position:relative;width:95px;height:75px;border-radius:50%;background:radial-gradient(circle at 40% 30%,#ffd700,#b8860b 70%,#5c4000);border:3px solid #fff59d;box-shadow:0 0 20px rgba(255,215,0,.6);display:grid;place-items:center}
-.cage-base{display:flex;gap:4px}
-.cage-ball{width:20px;height:20px;border-radius:50%;background:#fff;color:#000;font:900 10px "Barlow Condensed";display:grid;place-items:center;box-shadow:0 2px 4px rgba(0,0,0,.4)}
+.stage-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+}
+.next-timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid #00f3ff !important;
+  border-radius: 12px;
+  background: rgba(0, 4, 18, 0.45) !important;
+  padding: 12px 24px;
+  color: #fff;
+  font: 800 15px "Barlow Condensed";
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.4), inset 0 0 10px rgba(0, 243, 255, 0.1) !important;
+  min-width: 220px;
+  text-align: center;
+}
+.next-timer-box span {
+  font-size: 13px;
+  color: #8bb7f0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.next-timer-box .timer-icon {
+  display: none;
+}
+.live-timer-countdown {
+  color: #ffd700 !important;
+  font-size: 52px !important;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  line-height: 1;
+  margin: 0 !important;
+}
+.bingo-cage-graphic {
+  position: relative;
+  width: 95px;
+  height: 75px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 30%, #ffd700, #b8860b 70%, #5c4000);
+  border: 3px solid #fff59d;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  display: grid;
+  place-items: center;
+}
+.cage-base { display: flex; gap: 4px; }
+.cage-ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  font: 900 10px "Barlow Condensed";
+  display: grid;
+  place-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
+}
 
 /* RIGHT TOP COLUMN: DOADOR / RANKING TABLE */
-.players.panel{padding:12px;background:linear-gradient(180deg,#062664,#021035);border:2px solid #0088ff;border-radius:14px;box-shadow:0 0 20px rgba(0,136,255,.25);display:flex;flex-direction:column}
-.players-head{background:linear-gradient(90deg,#094ab4,#042767);color:#ffffff;font:800 13px "Barlow Condensed";padding:10px 14px;border-radius:8px;display:grid;grid-template-columns:75px 1fr 130px;align-items:center;text-align:center;letter-spacing:1px;box-shadow:0 2px 6px rgba(0,0,0,.2)}
-.head-rings{display:inline-flex;gap:2px;margin-left:4px;vertical-align:middle}.head-rings i{width:8px;height:8px;border-radius:50%;border:1.5px solid #aee2ff;display:inline-block}
-.player-row{background:#ffffff;color:#041f54;margin-top:5px;padding:8px 12px;border-radius:8px;display:grid;grid-template-columns:75px 1fr 130px;align-items:center;text-align:center;font-weight:700;box-shadow:0 2px 5px rgba(0,0,0,.15);transition:transform .15s}
-.player-row:hover{transform:translateX(3px)}
-.cupom-code{color:#e52b21;font-family:monospace;font-size:14px;font-weight:900}
-.doador-name{font-size:12px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;flex-direction:column;align-items:center}
-.doador-name small{color:#0077ff;font-size:10px}
-.missing-pills{display:flex;gap:4px;justify-content:center}
-.missing-pills i{width:26px;height:26px;border-radius:50%;background:#07357d;color:#ffd21f;border:1.5px solid #ffd21f;display:grid;place-items:center;font-style:normal;font-weight:900;font-size:11px;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.players.panel {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.players-head {
+  background: linear-gradient(90deg, #094ab4, #042767);
+  color: #ffffff;
+  font: 800 13px "Barlow Condensed";
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 75px 1fr 130px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+.head-rings {
+  display: inline-flex;
+  gap: 2px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.head-rings i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid #aee2ff;
+  display: inline-block;
+}
+.player-row {
+  background: #ffffff;
+  color: #041f54;
+  margin-top: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 75px 1fr 130px;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 2px 5px rgba(0,0,0,.15);
+  transition: transform .15s;
+}
+.player-row:hover { transform: translateX(3px); }
+.cupom-code { color: #e52b21; font-family: monospace; font-size: 14px; font-weight: 900; }
+.doador-name {
+  font-size: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.doador-name small { color: #0077ff; font-size: 10px; }
+.missing-pills { display: flex; gap: 4px; justify-content: center; }
+.missing-pills i {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #07357d;
+  color: #ffd21f;
+  border: 1.5px solid #ffd21f;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 11px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
 
 /* RIGHT BOTTOM COLUMN: MINHAS CARTELAS */
-.my-cards.panel{padding:12px;background:linear-gradient(180deg,#062664,#021035);border:2px solid #0088ff;border-radius:14px;margin-top:12px;box-shadow:0 0 20px rgba(0,136,255,.25)}
-.my-cards h2{text-align:center;color:#ffffff;font:900 20px "Barlow Condensed";margin:0 0 10px;letter-spacing:1px}
-.cards-grid-2x2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.bingo-card{background:#eaf3fd;border:3px solid #00aaff;border-radius:10px;padding:8px;position:relative;box-shadow:0 4px 10px rgba(0,0,0,.2)}
-.card-header-badge{display:block;text-align:center;background:linear-gradient(180deg,#ffd700,#ff9900);color:#041b4e;border-radius:6px;padding:3px 8px;font:900 12px "Barlow Condensed";margin-bottom:6px;letter-spacing:1px;box-shadow:0 2px 4px rgba(0,0,0,.2)}
-.card-cells-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
-.card-cells-grid span{aspect-ratio:1.15;background:#ffffff;color:#041b4e;border:1px solid #b4d3f5;border-radius:5px;display:grid;place-items:center;font-weight:800;font-size:12px}
-.card-cells-grid span.marked{background:#ffd21f;color:#041b4e;font-weight:900;box-shadow:inset 0 0 6px #ff9900,0 0 8px rgba(255,210,31,.5)}
-.card-cells-grid span.free-star{color:#ffb300;font-size:14px}
+.my-cards.panel {
+  padding: 12px;
+}
+.my-cards h2 {
+  text-align: center;
+  color: #ffffff;
+  font: 900 20px "Barlow Condensed";
+  margin: 0 0 10px;
+  letter-spacing: 1px;
+}
+.cards-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.bingo-card {
+  background: #ffffff !important;
+  border: 2px solid #00f3ff !important;
+  border-radius: 10px;
+  padding: 8px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.4), 0 4px 10px rgba(0,0,0,0.25) !important;
+}
+.card-header-badge {
+  display: block;
+  text-align: center;
+  background: linear-gradient(180deg, #ffd700, #ff9900);
+  color: #041b4e;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font: 900 12px "Barlow Condensed";
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+.card-cells-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+.card-cells-grid span {
+  aspect-ratio: 1.15;
+  background: #ffffff;
+  color: #041b4e;
+  border: 1px solid #b4d3f5;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 12px;
+}
+.card-cells-grid span.marked {
+  background: #ffd21f;
+  color: #041b4e;
+  font-weight: 900;
+  box-shadow: inset 0 0 6px #ff9900, 0 0 8px rgba(255,210,31,.5);
+}
+.card-cells-grid span.free-star {
+  color: #ffb300;
+  font-size: 14px;
+}
 
-/* BOTTOM FULL-WIDTH COLUMN: ÚLTIMOS NÚMEROS SORTEADOS */
-.ball-history.panel{grid-column:1/-1;padding:14px 20px;background:linear-gradient(180deg,#062664,#021035);border:2px solid #0088ff;border-radius:14px;box-shadow:0 0 20px rgba(0,136,255,.25);position:relative}
-.ball-history h2{text-align:center;color:#ffffff;font:900 22px "Barlow Condensed";margin:0 0 12px;letter-spacing:1px}
-.balls-90-grid{display:grid;grid-template-columns:repeat(20,1fr);gap:5px}
-.ball-90-item{aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font:800 12px "Barlow Condensed",sans-serif;transition:transform .15s}
-.undrawn{background:#ffffff;color:#041b4e;border:1.5px solid #b4d3f5;box-shadow:inset 0 2px 4px rgba(0,0,0,.1)}
-.drawn{color:#ffffff;font-weight:900;text-shadow:0 1px 2px #000;box-shadow:0 2px 6px rgba(0,0,0,.3)}
-.drawn.ball-blue{background:radial-gradient(circle at 35% 30%,#40c4ff,#0091ea)}
-.drawn.ball-red{background:radial-gradient(circle at 35% 30%,#ff5252,#d50000)}
-.drawn.ball-green{background:radial-gradient(circle at 35% 30%,#69f0ae,#00c853)}
-.drawn.ball-yellow{background:radial-gradient(circle at 35% 30%,#ffea00,#ffd600);color:#000;text-shadow:none}
-.drawn.ball-purple{background:radial-gradient(circle at 35% 30%,#e040fb,#aa00ff)}
-.drawn.ball-gold{background:radial-gradient(circle at 35% 30%,#ffe082,#ffab00)}
-.current{background:radial-gradient(circle at 35% 30%,#ff1744,#b71c1c)!important;color:#fff!important;border:2.5px solid #ffff00!important;box-shadow:0 0 18px #ff1744!important;animation:pulse 0.8s infinite}
+/* BOTTOM COLUMN: ÚLTIMOS NÚMEROS SORTEADOS */
+.ball-history.panel {
+  padding: 14px 20px;
+  position: relative;
+}
+.ball-history h2 {
+  text-align: center;
+  color: #ffffff;
+  font: 900 22px "Barlow Condensed";
+  margin: 0 0 12px;
+  letter-spacing: 1px;
+}
+.balls-90-grid {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  gap: 8px;
+  padding: 10px 0;
+}
+.ball-90-item {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font: 800 13px "Barlow Condensed", sans-serif;
+  transition: transform .15s;
+  margin: auto;
+}
+.undrawn {
+  background: #ffffff !important;
+  color: #041b4e !important;
+  border: 1.5px solid #b4d3f5 !important;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+.drawn {
+  font-weight: 900;
+  box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+.drawn.ball-blue { background: radial-gradient(circle at 35% 30%, #40c4ff, #0091ea) !important; color: #fff !important; border: 1.5px solid #80d8ff !important; }
+.drawn.ball-red { background: radial-gradient(circle at 35% 30%, #ff5252, #d50000) !important; color: #fff !important; border: 1.5px solid #ff8a8a !important; }
+.drawn.ball-green { background: radial-gradient(circle at 35% 30%, #69f0ae, #00c853) !important; color: #fff !important; border: 1.5px solid #b9f6ca !important; }
+.drawn.ball-yellow { background: radial-gradient(circle at 35% 30%, #ffea00, #ffd600) !important; color: #fff !important; border: 1.5px solid #fff59d !important; text-shadow: 0 1px 2px rgba(0,0,0,0.4) !important; }
+.drawn.ball-purple { background: radial-gradient(circle at 35% 30%, #e040fb, #aa00ff) !important; color: #fff !important; border: 1.5px solid #ea80fc !important; }
+.drawn.ball-gold { background: radial-gradient(circle at 35% 30%, #ffe082, #ffab00) !important; color: #fff !important; border: 1.5px solid #fff59d !important; text-shadow: 0 1px 2px rgba(0,0,0,0.4) !important; }
+
+.current {
+  background: radial-gradient(circle at 35% 30%, #ff1744, #b71c1c) !important;
+  color: #fff !important;
+  border: 2.5px solid #ffff00 !important;
+  box-shadow: 0 0 18px #ff1744 !important;
+  animation: pulse 0.8s infinite;
+}
 
 /* BOTTOM RIGHT CORNER ACCENT */
-.luck-accent-banner{position:absolute;right:25px;bottom:-60px;display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#073b91,#031e54);border:2px solid #ffd700;border-radius:14px;padding:8px 16px;box-shadow:0 0 20px rgba(255,215,0,.4)}
+.luck-accent-banner {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #073b91, #031e54);
+  border: 2px solid #ffd700;
+  border-radius: 14px;
+  padding: 8px 16px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
 .luck-text{display:flex;flex-direction:column;line-height:1}
 .luck-text span{font:800 11px "Barlow Condensed";color:#fff}
 .luck-text strong{font:900 22px "Barlow Condensed";color:#ffd21f;text-shadow:0 0 8px #ffb300}
@@ -278,18 +638,16 @@
 
 /* RESPONSIVE LAYOUT BREAKPOINTS */
 @media(max-width:1200px){
-  .live-board{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-  .ball-history.panel{grid-column:span 2}
+  .live-board{grid-template-columns:1fr}
+  .live-left-center-top{grid-template-columns:1fr 1.2fr}
 }
 @media(max-width:1024px), (orientation: portrait){
-  .live-board{grid-template-columns:1fr!important;grid-template-rows:auto!important}
-  .ball-history.panel{grid-column:1!important}
+  .live-board{grid-template-columns:1fr!important}
+  .live-left-center-top{grid-template-columns:1fr!important}
 }
 @media(max-width:768px){
   .live-header-bar{flex-direction:column;gap:10px;min-height:auto;padding:12px}
   .live-title-center{display:none!important}
-  .live-board{grid-template-columns:1fr}
-  .ball-history.panel{grid-column:1}
   .balls-90-grid{grid-template-columns:repeat(10,1fr)}
   .mega-ball{width:240px;height:240px}
   .mega-ball span{font-size:130px}
