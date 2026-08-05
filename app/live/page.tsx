@@ -525,9 +525,9 @@ function WinnerOverlay({ notice, onClose }: { notice: WinnerNotice; onClose: () 
           <i style={{ "--i": i } as React.CSSProperties} key={i}>●</i>
         ))}
       </div>
-      <i className="winner-side-light left" />
-      <i className="winner-side-light right" />
       <section>
+        <i className="winner-side-light left" />
+        <i className="winner-side-light right" />
         <button onClick={onClose} aria-label="Fechar"><X /></button>
         {notice.split && <b className="split-badge">DIVIDIDO!</b>}
         <p>{notice.subtitle}</p>
@@ -553,9 +553,9 @@ function WinnerOverlay({ notice, onClose }: { notice: WinnerNotice; onClose: () 
 function SummaryOverlay({ summary, onClose }: { summary: DrawSummary; onClose: () => void }) {
   return (
     <div className="winner-overlay summary-overlay">
-      <i className="winner-side-light left" />
-      <i className="winner-side-light right" />
       <section>
+        <i className="winner-side-light left" />
+        <i className="winner-side-light right" />
         <button onClick={onClose} aria-label="Fechar"><X /></button>
         <p>SORTEIO ENCERRADO</p>
         <h2>Resumo de ganhadores</h2>
@@ -574,7 +574,7 @@ function SummaryOverlay({ summary, onClose }: { summary: DrawSummary; onClose: (
               </article>
             );
           })}
-          {safeNumber(summary.jackpotAmount) > 0 && (
+          {summary.jackpotWinners && summary.jackpotWinners.length > 0 && safeNumber(summary.jackpotAmount) > 0 && (
             <article className="summary-jackpot">
               <span>JACKPOT</span>
               <b>{summary.jackpotWinners?.map(winner => winner.playerName || winner.name || "Jogador").join(", ") || "Jackpot pago"}</b>
