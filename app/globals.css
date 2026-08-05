@@ -589,27 +589,58 @@
   margin: auto;
 }
 .undrawn {
-  background: #ffffff !important;
-  color: #041b4e !important;
-  border: 1.5px solid #b4d3f5 !important;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1) !important;
+  background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f4f8fc 50%, #dce7f5 85%, #b2cbe8 100%) !important;
+  color: #002d6b !important;
+  border: 1px solid rgba(0, 243, 255, 0.4) !important;
+  box-shadow: 0 0 6px rgba(0, 243, 255, 0.35), inset 0 2px 4px rgba(255, 255, 255, 0.8), inset -2px -2px 6px rgba(0, 50, 120, 0.12) !important;
 }
 .drawn {
   font-weight: 900;
-  box-shadow: 0 2px 6px rgba(0,0,0,.3);
 }
-.drawn.ball-blue { background: radial-gradient(circle at 35% 30%, #40c4ff, #0091ea) !important; color: #fff !important; border: 1.5px solid #80d8ff !important; }
-.drawn.ball-red { background: radial-gradient(circle at 35% 30%, #ff5252, #d50000) !important; color: #fff !important; border: 1.5px solid #ff8a8a !important; }
-.drawn.ball-green { background: radial-gradient(circle at 35% 30%, #69f0ae, #00c853) !important; color: #fff !important; border: 1.5px solid #b9f6ca !important; }
-.drawn.ball-yellow { background: radial-gradient(circle at 35% 30%, #ffea00, #ffd600) !important; color: #fff !important; border: 1.5px solid #fff59d !important; text-shadow: 0 1px 2px rgba(0,0,0,0.4) !important; }
-.drawn.ball-purple { background: radial-gradient(circle at 35% 30%, #e040fb, #aa00ff) !important; color: #fff !important; border: 1.5px solid #ea80fc !important; }
-.drawn.ball-gold { background: radial-gradient(circle at 35% 30%, #ffe082, #ffab00) !important; color: #fff !important; border: 1.5px solid #fff59d !important; text-shadow: 0 1px 2px rgba(0,0,0,0.4) !important; }
+.drawn.ball-blue {
+  background: radial-gradient(circle at 35% 30%, #a0e6ff 0%, #0091ea 50%, #0060a3 85%, #003666 100%) !important;
+  border: 1.5px solid #00f3ff !important;
+  box-shadow: 0 0 10px rgba(0, 243, 255, 0.75), inset 0 2px 4px rgba(255, 255, 255, 0.6) !important;
+  color: #fff !important;
+}
+.drawn.ball-red {
+  background: radial-gradient(circle at 35% 30%, #ff8a8a 0%, #d50000 50%, #900000 85%, #5a0000 100%) !important;
+  border: 1.5px solid #ff4d4d !important;
+  box-shadow: 0 0 10px rgba(213, 0, 0, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.6) !important;
+  color: #fff !important;
+}
+.drawn.ball-green {
+  background: radial-gradient(circle at 35% 30%, #b2ffb2 0%, #00c853 50%, #008f30 85%, #005a10 100%) !important;
+  border: 1.5px solid #00e676 !important;
+  box-shadow: 0 0 10px rgba(0, 200, 83, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.6) !important;
+  color: #fff !important;
+}
+.drawn.ball-yellow {
+  background: radial-gradient(circle at 35% 30%, #fffd8d 0%, #ffd600 50%, #c6a000 85%, #8c6d00 100%) !important;
+  border: 1.5px solid #ffea00 !important;
+  box-shadow: 0 0 10px rgba(255, 214, 0, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.6) !important;
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4) !important;
+}
+.drawn.ball-purple {
+  background: radial-gradient(circle at 35% 30%, #f7c0ff 0%, #aa00ff 50%, #7600b3 85%, #4a0072 100%) !important;
+  border: 1.5px solid #e040fb !important;
+  box-shadow: 0 0 10px rgba(170, 0, 255, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.6) !important;
+  color: #fff !important;
+}
+.drawn.ball-gold {
+  background: radial-gradient(circle at 35% 30%, #ffe082 0%, #ff8f00 50%, #c66900 85%, #8c4400 100%) !important;
+  border: 1.5px solid #ffb300 !important;
+  box-shadow: 0 0 10px rgba(255, 143, 0, 0.7), inset 0 2px 4px rgba(255, 255, 255, 0.6) !important;
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4) !important;
+}
 
 .current {
-  background: radial-gradient(circle at 35% 30%, #ff1744, #b71c1c) !important;
+  background: radial-gradient(circle at 35% 30%, #ff5252 0%, #ff1744 50%, #b71c1c 85%, #7f0000 100%) !important;
   color: #fff !important;
-  border: 2.5px solid #ffff00 !important;
-  box-shadow: 0 0 18px #ff1744 !important;
+  border: 2.5px solid #00f3ff !important;
+  box-shadow: 0 0 20px #ff1744, 0 0 10px #00f3ff, inset 0 2px 4px rgba(255, 255, 255, 0.8) !important;
   animation: pulse 0.8s infinite;
 }
 
