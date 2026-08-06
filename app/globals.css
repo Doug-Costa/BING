@@ -319,7 +319,8 @@
 .stage-body {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  position: relative;
   margin: 15px 0;
 }
 .mega-ball {
@@ -351,6 +352,10 @@
   flex-direction: column;
   gap: 14px;
   align-items: center;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .next-ball-3d {
   width: 64px;
