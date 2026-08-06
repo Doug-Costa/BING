@@ -361,10 +361,10 @@ export default function LivePage() {
                 </div>
                 <div className="next-numbers-stack">
                   {(lastBalls.length ? lastBalls : [30, 65, 90]).slice(0, 3).map((number, index) => {
-                    const colors = ["red", "gold", "purple"];
-                    const color = colors[index % 3];
+                    const isPlaceholder = lastBalls.length === 0;
+                    const colorClass = isPlaceholder ? "undrawn" : getBallColorClass(number);
                     return (
-                      <div className={`next-ball-3d ball-${color}`} key={`${number}-${index}`}>
+                      <div className={`next-ball-3d ${colorClass}`} key={`${number}-${index}`}>
                         <span>{number}</span>
                       </div>
                     );

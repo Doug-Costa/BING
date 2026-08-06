@@ -752,3 +752,54 @@
   height: 38px;
 }
 
+/* Premium styling for drawn and undrawn balls in next list */
+.next-ball-3d.undrawn {
+  background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f4f8fc 50%, #dce7f5 85%, #b2cbe8 100%) !important;
+  color: #002d6b !important;
+  border: 2px solid rgba(0, 243, 255, 0.8) !important;
+  box-shadow: 0 0 12px rgba(0, 243, 255, 0.6), inset 0 3px 5px rgba(255, 255, 255, 0.8), 0 4px 8px rgba(0, 0, 0, 0.45) !important;
+  text-shadow: none !important;
+}
+
+.next-ball-3d.ball-blue {
+  background: radial-gradient(circle at 35% 30%, #a0e6ff 0%, #0091ea 50%, #0060a3 85%, #003666 100%) !important;
+  border: 2px solid #00f3ff !important;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.8), inset 0 3px 6px rgba(255, 255, 255, 0.7), 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+}
+.next-ball-3d.ball-red {
+  background: radial-gradient(circle at 35% 30%, #ff8a8a 0%, #d50000 50%, #900000 85%, #5a0000 100%) !important;
+  border: 2px solid #ff4d4d !important;
+  box-shadow: 0 0 15px rgba(213, 0, 0, 0.8), inset 0 3px 6px rgba(255, 255, 255, 0.7), 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+}
+.next-ball-3d.ball-green {
+  background: radial-gradient(circle at 35% 30%, #b2ffb2 0%, #00c853 50%, #008f30 85%, #005a10 100%) !important;
+  border: 2px solid #00e676 !important;
+  box-shadow: 0 0 15px rgba(0, 200, 83, 0.8), inset 0 3px 6px rgba(255, 255, 255, 0.7), 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+}
+.next-ball-3d.ball-yellow {
+  background: radial-gradient(circle at 35% 30%, #fffd8d 0%, #ffd600 50%, #c6a000 85%, #8c6d00 100%) !important;
+  border: 2px solid #ffea00 !important;
+  box-shadow: 0 0 15px rgba(255, 214, 0, 0.8), inset 0 3px 6px rgba(255, 255, 255, 0.7), 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+}
+.next-ball-3d.ball-purple {
+  background: radial-gradient(circle at 35% 30%, #f7c0ff 0%, #aa00ff 50%, #7600b3 85%, #4a0072 100%) !important;
+  border: 2px solid #e040fb !important;
+  box-shadow: 0 0 15px rgba(170, 0, 255, 0.8), inset 0 3px 6px rgba(255, 255, 255, 0.7), 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+}
+.next-ball-3d.ball-gold {
+  background: radial-gradient(circle at 35% 30%, #ffe082 0%, #ff8f00 50%, #c66900 85%, #8c4400 100%) !important;
+  border: 2px solid #ffb300 !important;
+  box-shadow: 0 0 15px rgba(255, 143, 0, 0.8), inset 0 3px 6px rgba(255, 255, 255, 0.7), 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+}
