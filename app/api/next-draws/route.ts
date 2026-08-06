@@ -4,7 +4,7 @@ import { mockDraws } from "@/lib/mock";
 export const revalidate = 30;
 
 export async function GET() {
-  const base = process.env.NEXT_PUBLIC_API_URL;
+  const base = (process.env.NEXT_PUBLIC_API_URL || "").replace(/\/+$/, "");
   const roomId = process.env.NEXT_PUBLIC_ROOM_ID || "room-001";
   const mocksEnabled = process.env.NEXT_PUBLIC_ENABLE_MOCKS === "true";
   if (!base) {

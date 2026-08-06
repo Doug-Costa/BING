@@ -1,7 +1,7 @@
 import type { AuthData } from './types';
 import { jwtDecode } from 'jwt-decode';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || '';
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || '').replace(/\/+$/, '');
 let refreshInFlight: Promise<AuthData> | null = null;
 
 // Extrai o email do token JWT (se existir)

@@ -144,7 +144,7 @@ export default function LivePage() {
 
   useEffect(() => {
     if (!user?.access_token) return;
-    const base = process.env.NEXT_PUBLIC_SSE_URL || process.env.NEXT_PUBLIC_API_URL;
+    const base = (process.env.NEXT_PUBLIC_SSE_URL || process.env.NEXT_PUBLIC_API_URL || "").replace(/\/+$/, "");
     if (!base) { setConnectionError("Endereço SSE não configurado."); return; }
     const storedToken = localStorage.getItem("bingo_token") || user.access_token;
     const token = storedToken.trim().replace(/^Bearer\s+/i, "").replace(/^["']|["']$/g, "");
