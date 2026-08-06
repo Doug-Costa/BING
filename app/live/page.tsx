@@ -37,7 +37,7 @@ const demoTopWinners: CloseWinner[] = [
 ];
 
 export default function LivePage() {
-  const { user, openAuth } = useApp();
+  const { user, openAuth, muted, setMuted } = useApp();
   const demoMode = process.env.NEXT_PUBLIC_SSE_DEMO_MODE === "true";
   const [current, setCurrent] = useState(demoMode ? 11 : 0);
   const [balls, setBalls] = useState<number[]>(demoMode ? demoBalls : []);
@@ -45,7 +45,6 @@ export default function LivePage() {
   const [topWinners, setTopWinners] = useState<CloseWinner[]>(demoMode ? demoTopWinners : []);
   const [topWinnersStage, setTopWinnersStage] = useState(1);
   const [connected, setConnected] = useState(false);
-  const [muted, setMuted] = useState(false);
   const [jackpot, setJackpot] = useState(demoMode ? 204.79 : 0);
   const [prizes, setPrizes] = useState<Prizes>(demoMode ? { line1: 10, line2: 20, line3: 100 } : { line1: 0, line2: 0, line3: 0 });
   const [wonLines, setWonLines] = useState<number[]>([]);
@@ -274,23 +273,6 @@ export default function LivePage() {
 
   return (
     <InnerShell live>
-      {/* TOP HEADER BAR EXACTLY AS TEMPLATE */}
-      <section className="live-header-bar">
-        <div className="live-brand-logo">
-          <img src="/theme-bingo-show/logos/logo-main.svg" alt="Bingo Show" className="live-logo-img" />
-        </div>
-        <div className="live-title-center">
-          <h1 className="live-main-title">BINGO <span>AO VIVO</span></h1>
-          <p className="live-subtitle">★ SUA SORTE, NOSSO BINGO! ★</p>
-        </div>
-        <div className="live-tools-right">
-          <LiveClock />
-          <button className="sound-toggle-btn" onClick={() => setMuted(!muted)} aria-label="Som">
-            {muted ? <VolumeX /> : <Volume2 />}
-          </button>
-        </div>
-      </section>
-
       {!user && (
         <div className="live-login">
           <WifiOff />
@@ -490,24 +472,6 @@ export default function LivePage() {
       {winnerNotice && <WinnerOverlay notice={winnerNotice} onClose={() => setWinnerNotice(null)} />}
       {summary && <SummaryOverlay summary={summary} onClose={() => setSummary(null)} />}
     </InnerShell>
-  );
-}
-
-function LiveClock() {
-  const [clock, setClock] = useState<Date | null>(null);
-  useEffect(() => {
-    const update = () => setClock(new Date());
-    update();
-    const timer = window.setInterval(update, 1000);
-    return () => window.clearInterval(timer);
-  }, []);
-  return (
-    <div className="live-clock-pill">
-      <CalendarDays className="clock-cal-icon" />
-      <span className="clock-date">{clock ? clock.toLocaleDateString("pt-BR") : "28/07/2026"}</span>
-      <span className="clock-sep">|</span>
-      <span className="clock-time">{clock ? clock.toLocaleTimeString("pt-BR") : "15:40:25"}</span>
-    </div>
   );
 }
 

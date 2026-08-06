@@ -13,6 +13,8 @@ type ContextValue = {
   setAuthOpen: (open: boolean) => void;
   authMode: "login" | "register";
   openAuth: (mode: "login" | "register") => void;
+  muted: boolean;
+  setMuted: (muted: boolean) => void;
 };
 
 const AppContext = createContext<ContextValue | null>(null);
@@ -21,6 +23,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AuthData | null>(null);
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState<"login" | "register">("login");
+  const [muted, setMuted] = useState(false);
 
   useEffect(() => {
     const affiliate = new URLSearchParams(window.location.search).get("affiliate")?.trim();
@@ -44,7 +47,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const openAuth = (mode: "login" | "register") => { setAuthMode(mode); setAuthOpen(true); };
-  return <AppContext.Provider value={{ user, setUser, authOpen, setAuthOpen, authMode, openAuth }}>{children}<MobileNav /><PwaExperience /></AppContext.Provider>;
+  return <AppContext.Provider value={{ user, setUser, authOpen, setAuthOpen, authMode, openAuth, muted, setMuted }}>{children}<MobileNav /><PwaExperience /></AppContext.Provider>;
 }
 
 function isExpired(token: string) {
