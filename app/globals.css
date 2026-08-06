@@ -321,7 +321,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 15px 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .mega-ball {
   width: 310px;
