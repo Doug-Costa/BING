@@ -378,11 +378,7 @@ export default function LivePage() {
                   <b className="live-timer-countdown">00:30</b>
                 </div>
                 <div className="bingo-cage-graphic">
-                  <div className="cage-base">
-                    <span className="cage-ball cb1">15</span>
-                    <span className="cage-ball cb2">42</span>
-                    <span className="cage-ball cb3">88</span>
-                  </div>
+                  <img src="/theme-bingo-show/bingo-cage.jpg" alt="Globo de Bingo Dourado" className="bingo-cage-img" />
                 </div>
               </div>
             </section>
