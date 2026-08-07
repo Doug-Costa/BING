@@ -447,6 +447,7 @@
   height: 100%;
   object-fit: contain !important;
   object-position: center;
+  mix-blend-mode: screen;
 }
 
 /* RIGHT TOP COLUMN: DOADOR / RANKING TABLE */
