@@ -675,18 +675,21 @@
   bottom: auto;
   display: flex;
   align-items: center;
-  gap: 10px;
-  background: linear-gradient(135deg, #073b91, #031e54);
-  border: 2px solid #ffd700;
+  justify-content: center;
+  padding: 4px 6px;
+  background: linear-gradient(135deg, rgba(7, 59, 145, 0.7), rgba(3, 30, 84, 0.85));
+  border: 2px solid #00d5ff;
   border-radius: 14px;
-  padding: 8px 16px;
-  box-shadow: 0 0 22px rgba(255, 215, 0, 0.55);
+  box-shadow: 0 0 18px rgba(0, 213, 255, 0.5), inset 0 0 12px rgba(0, 213, 255, 0.2);
 }
-.luck-text{display:flex;flex-direction:column;line-height:1}
-.luck-text span{font:800 11px "Barlow Condensed";color:#fff}
-.luck-text strong{font:900 22px "Barlow Condensed";color:#ffd21f;text-shadow:0 0 8px #ffb300}
-.luck-text small{font:800 11px "Barlow Condensed";color:#fff}
-.luck-clover{font-size:28px;filter:drop-shadow(0 0 8px #5eff6e)}
+.luck-banner-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  max-height: 85px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0, 213, 255, 0.5));
+}
 
 .connection{position:fixed;right:15px;bottom:15px;background:#271a0d;border:1px solid #d27c22;border-radius:20px;padding:7px 12px;display:flex;gap:7px;align-items:center;font-size:11px;z-index:20}.connection svg{width:15px}.connection.on{background:#093723;border-color:#20bb70}
 @keyframes float{50%{transform:translateY(-13px) rotate(4deg)}}@keyframes drift{50%{transform:translate(70px,50px) scale(1.15)}}@keyframes sweep{to{transform:translateX(500px) rotate(55deg)}}@keyframes pulse{50%{box-shadow:0 0 27px #db2eff,inset 0 0 24px rgba(158,0,255,.65)}}@keyframes fade{from{opacity:0}}@keyframes spin{to{transform:rotate(360deg)}}
