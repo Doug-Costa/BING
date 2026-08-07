@@ -676,11 +676,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 6px;
-  background: linear-gradient(135deg, rgba(7, 59, 145, 0.7), rgba(3, 30, 84, 0.85));
-  border: 2px solid #00d5ff;
-  border-radius: 14px;
-  box-shadow: 0 0 18px rgba(0, 213, 255, 0.5), inset 0 0 12px rgba(0, 213, 255, 0.2);
+  padding: 0;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 .luck-banner-img {
   width: 100%;
@@ -688,7 +687,6 @@
   height: auto;
   max-height: 85px;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(0, 213, 255, 0.5));
 }
 
 .connection{position:fixed;right:15px;bottom:15px;background:#271a0d;border:1px solid #d27c22;border-radius:20px;padding:7px 12px;display:flex;gap:7px;align-items:center;font-size:11px;z-index:20}.connection svg{width:15px}.connection.on{background:#093723;border-color:#20bb70}
