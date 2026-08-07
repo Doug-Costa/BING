@@ -159,7 +159,7 @@
   .won-jackpot { font-size: 23px; }
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--white);font-family:Inter,Arial,sans-serif;background:radial-gradient(ellipse at 50% 35%, #0848c4 0%, #031d68 55%, #010a30 100%) !important;min-height:100vh}button,input,select{font:inherit}button,a{color:inherit}a{text-decoration:none}button{cursor:pointer}.site-shell{width:min(1540px,calc(100% - 34px));margin:auto;position:relative;z-index:1;padding-bottom:24px}.ambient{position:fixed;inset:0;overflow:hidden;pointer-events:none}.ambient:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(8,127,252,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(8,127,252,.025) 1px,transparent 1px);background-size:42px 42px}.ambient i{position:absolute;width:380px;height:380px;border-radius:50%;filter:blur(120px);background:#064ec7;opacity:.16;animation:drift 14s ease-in-out infinite}.ambient.live-ambient i{animation:none}.ambient i:nth-child(2){right:0;top:30%;background:#7000c7;animation-delay:-5s}.ambient i:nth-child(3){left:40%;bottom:-20%;background:#006cd8;animation-delay:-9s}
-.header{height:170px;display:grid;grid-template-columns:360px 1fr auto;align-items:center;gap:30px}.brand{display:flex;align-items:center;justify-content:center;filter:none;transform:rotate(-1deg)}.brand-lines{display:flex;flex-direction:column;align-items:center;line-height:.72}.brand strong,.brand em{font:900 64px/1 "Barlow Condensed";letter-spacing:2px;font-style:normal;-webkit-text-stroke:2px #dff7ff;text-shadow:0 3px 0 #003b91,0 7px 0 #001d51,0 0 8px #2ad9ff;background:linear-gradient(#fff,#42dbff 35%,#087ffc 60%,#fff 66%,#0477e6 74%);color:transparent;background-clip:text}.brand em{font-size:48px;background:linear-gradient(#fff598,#ffc400 42%,#f48a00 70%,#fff1a0 76%,#e98100);background-clip:text;-webkit-text-stroke:2px #fff0a7;text-shadow:0 4px 0 #803500,0 0 10px #ffc400}.brand-star{font-size:30px;color:var(--gold);text-shadow:0 0 8px var(--gold)}.brand-star.right{transform:translateY(18px)}.nav{display:flex;justify-content:center;gap:25px}.nav a{display:flex;flex-direction:column;align-items:center;gap:8px;text-transform:uppercase;font:700 13px "Barlow Condensed";position:relative;white-space:nowrap}.nav svg{width:26px;color:#e9f3ff}.nav a:hover,.nav a:first-child{color:var(--gold)}.nav a:hover svg,.nav a:first-child svg{color:var(--gold);filter:drop-shadow(0 0 6px var(--gold))}.nav a:after{content:"";height:2px;width:0;background:var(--gold);position:absolute;bottom:-13px;transition:.25s}.nav a:hover:after,.nav a:first-child:after{width:32px}.account{display:flex;align-items:center;justify-content:flex-end;gap:10px}.btn{border:0;border-radius:8px;padding:14px 22px;font-weight:900;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:.25s}.btn svg{width:20px}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.btn-gold{color:#081029;background:linear-gradient(180deg,#ffe44b,#ffc400 55%,#f4a500);box-shadow:inset 0 1px #fff7a5,0 7px 22px rgba(255,196,0,.22)}.btn-blue{background:linear-gradient(#078df8,#0048a7);border:1px solid #24c5ff}.btn-ghost{border:1px solid #1667b5;background:#06142e}.btn.compact{padding:11px 15px}.btn.wide{width:100%}.user-chip{display:flex;gap:10px;align-items:center}.user-chip>svg{padding:8px;width:40px;height:40px;border:1px solid var(--cyan);border-radius:50%}.user-chip span{display:flex;flex-direction:column;font-size:12px}.user-chip small{color:var(--gold);margin-top:3px}.icon-button,.menu-button{background:transparent;border:0}.menu-button{display:none}
+.header{height:90px;display:grid;grid-template-columns:280px 1fr auto;align-items:center;gap:20px}.brand{display:flex;align-items:center;justify-content:center;filter:none;transform:rotate(-1deg)}.brand-lines{display:flex;flex-direction:column;align-items:center;line-height:.72}.brand strong,.brand em{font:900 64px/1 "Barlow Condensed";letter-spacing:2px;font-style:normal;-webkit-text-stroke:2px #dff7ff;text-shadow:0 3px 0 #003b91,0 7px 0 #001d51,0 0 8px #2ad9ff;background:linear-gradient(#fff,#42dbff 35%,#087ffc 60%,#fff 66%,#0477e6 74%);color:transparent;background-clip:text}.brand em{font-size:48px;background:linear-gradient(#fff598,#ffc400 42%,#f48a00 70%,#fff1a0 76%,#e98100);background-clip:text;-webkit-text-stroke:2px #fff0a7;text-shadow:0 4px 0 #803500,0 0 10px #ffc400}.brand-star{font-size:30px;color:var(--gold);text-shadow:0 0 8px var(--gold)}.brand-star.right{transform:translateY(18px)}.nav{display:flex;justify-content:center;gap:25px}.nav a{display:flex;flex-direction:column;align-items:center;gap:8px;text-transform:uppercase;font:700 13px "Barlow Condensed";position:relative;white-space:nowrap}.nav svg{width:26px;color:#e9f3ff}.nav a:hover,.nav a:first-child{color:var(--gold)}.nav a:hover svg,.nav a:first-child svg{color:var(--gold);filter:drop-shadow(0 0 6px var(--gold))}.nav a:after{content:"";height:2px;width:0;background:var(--gold);position:absolute;bottom:-13px;transition:.25s}.nav a:hover:after,.nav a:first-child:after{width:32px}.account{display:flex;align-items:center;justify-content:flex-end;gap:10px}.btn{border:0;border-radius:8px;padding:14px 22px;font-weight:900;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:.25s}.btn svg{width:20px}.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.btn-gold{color:#081029;background:linear-gradient(180deg,#ffe44b,#ffc400 55%,#f4a500);box-shadow:inset 0 1px #fff7a5,0 7px 22px rgba(255,196,0,.22)}.btn-blue{background:linear-gradient(#078df8,#0048a7);border:1px solid #24c5ff}.btn-ghost{border:1px solid #1667b5;background:#06142e}.btn.compact{padding:11px 15px}.btn.wide{width:100%}.user-chip{display:flex;gap:10px;align-items:center}.user-chip>svg{padding:8px;width:40px;height:40px;border:1px solid var(--cyan);border-radius:50%}.user-chip span{display:flex;flex-direction:column;font-size:12px}.user-chip small{color:var(--gold);margin-top:3px}.icon-button,.menu-button{background:transparent;border:0}.menu-button{display:none}
 .panel{border:2px solid #00d5ff!important;border-radius:var(--radius);background:linear-gradient(180deg,rgba(3,28,90,0.94),rgba(1,14,52,0.97))!important;box-shadow:0 0 20px rgba(0,213,255,0.6),0 0 35px rgba(0,140,255,0.35),inset 0 0 22px rgba(0,213,255,0.2)!important;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.58fr .95fr;gap:16px}.hero{height:355px;border:1px solid var(--line);border-radius:var(--radius);position:relative;overflow:hidden;background-image:linear-gradient(90deg,rgba(2,8,30,.22),rgba(1,6,20,.04)),url("/assets/bingo-hero.png");background-size:cover;background-position:center;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(1,7,26,.97) 0,rgba(2,14,45,.77) 38%,transparent 68%)}.hero-content{position:relative;z-index:3;padding:35px 0 0 45px}.eyebrow{display:flex;align-items:center;gap:7px;color:#b9d4ff;font:800 15px "Barlow Condensed";letter-spacing:1.6px;margin:0 0 8px}.eyebrow svg{width:18px;color:var(--gold)}.hero h1{font:italic 900 48px/.82 "Barlow Condensed";text-transform:uppercase;margin:0;color:#eff6ff;letter-spacing:-1px}.hero h1 em{font-style:italic;color:var(--gold);font-size:54px;text-shadow:0 2px #9c5a00}.hero h1 span{font-size:74px}.hero-content>p:not(.eyebrow){text-transform:uppercase;font:italic 800 22px "Barlow Condensed";margin:15px 0}.hero-content>p b{color:var(--gold)}.hero-button{font-size:15px;padding:14px 18px}.hero-dots{position:absolute;z-index:5;bottom:14px;left:45%;display:flex;gap:9px}.hero-dots i{width:8px;height:8px;border-radius:50%;background:#cbe1ff}.hero-dots i.active{background:var(--gold);box-shadow:0 0 8px var(--gold)}.float-ball{position:absolute!important;z-index:4}.b1{right:42%;top:35px}.b2{right:27%;top:78px}.b3{right:48%;bottom:53px}.ball{width:66px;height:66px;display:grid;place-items:center;border-radius:50%;font:900 34px "Barlow Condensed";color:white;border:2px solid rgba(255,255,255,.8);box-shadow:inset -8px -10px 12px rgba(0,0,0,.3),inset 7px 7px 10px rgba(255,255,255,.42),0 0 15px currentColor;text-shadow:0 3px 2px rgba(0,0,0,.45)}.ball.blue{background:radial-gradient(circle at 35% 25%,#6de8ff,#087ffc 48%,#032d88);color:#64dcff}.ball.red{background:radial-gradient(circle at 35% 25%,#ff8b79,#e52b21 48%,#761006);color:#ff4939}.ball.gold{background:radial-gradient(circle at 35% 25%,#fff095,#f6b906 48%,#8a5200);color:#ffd21f}.ball.purple{background:radial-gradient(circle at 35% 25%,#dc9cff,#8e35db 48%,#43116e);color:#bb72ff}.ball{color:white}.float-ball{animation:float 4s ease-in-out infinite}.b2{animation-delay:-1.5s}.b3{animation-delay:-2.7s}
 .panel-title{height:52px;display:flex;justify-content:space-between;align-items:center;padding:0 16px;border-bottom:1px solid rgba(35,136,255,.4)}.panel-title h2{display:flex;align-items:center;gap:10px;margin:0;text-transform:uppercase;font:800 20px "Barlow Condensed"}.panel-title svg{width:25px;color:#d9ebff}.panel-title a,.panel-title button{background:linear-gradient(#062f68,#02112f);border:1px solid var(--line);border-radius:6px;padding:7px 12px;font:700 11px Inter;text-transform:uppercase;display:flex;align-items:center}.panel-title a svg{width:14px}.draw-row{min-height:100px;display:grid;grid-template-columns:72px 1fr 145px 24px;align-items:center;gap:11px;padding:10px 14px;border-bottom:1px solid rgba(23,103,200,.32);transition:.2s}.draw-row:hover{background:rgba(9,92,208,.12)}.draw-row:last-child{border:0}.draw-row .ball{width:62px;height:62px}.draw-copy{display:flex;flex-direction:column}.draw-copy h3{margin:0;font:800 16px "Barlow Condensed";text-transform:uppercase}.draw-copy strong{font:800 27px "Barlow Condensed";color:var(--gold)}.draw-copy small{font-size:11px}.countdown{display:flex;background:#01091b;border:1px solid #245080;border-radius:6px;padding:8px;justify-content:center}.countdown span{display:flex;flex-direction:column;align-items:center;min-width:39px;position:relative}.countdown span+span:before{content:":";position:absolute;left:-3px;font-weight:900;font-size:18px}.countdown b{font-size:20px}.countdown small{font-size:8px}.row-action svg{width:20px}
 .benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:14px 0}.benefit{height:104px;border:1px solid #076de3;border-radius:12px;background:linear-gradient(120deg,#031332,#061842,#01091c);display:flex;align-items:center;padding:12px 28px;gap:20px;box-shadow:var(--shadow);text-transform:uppercase}.benefit>svg{width:57px;height:57px;color:#79d6ff;filter:drop-shadow(0 0 7px #087ffc)}.benefit div{display:flex;flex-direction:column;gap:4px}.benefit strong{font:800 18px "Barlow Condensed"}.benefit small{font-size:12px;text-transform:none}.benefit.jackpot svg{color:var(--gold);filter:drop-shadow(0 0 7px var(--gold))}.benefit.jackpot small{color:var(--gold);font-weight:800;text-transform:uppercase}.benefit.jackpot strong{color:#ffd04a;font-size:29px}
@@ -202,8 +202,8 @@
 .prizes.panel {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 18px;
+  gap: 10px;
+  padding: 12px;
 }
 .jackpot-live {
   border: 3px solid #00d5ff;
@@ -212,15 +212,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 20px 16px;
+  gap: 15px;
+  padding: 12px 14px;
   box-shadow: 0 0 20px rgba(0,213,255,0.55), inset 0 0 22px rgba(0,213,255,0.25);
-  min-height: 135px;
+  min-height: 105px;
 }
 .jackpot-icon-img {
-  width: 72px;
-  height: 72px;
-  filter: drop-shadow(0 0 14px #ffd21f);
+  width: 56px;
+  height: 56px;
+  filter: drop-shadow(0 0 10px #ffd21f);
 }
 .jackpot-info-col {
   display: flex;
@@ -228,14 +228,14 @@
   justify-content: center;
 }
 .jackpot-info-col small {
-  font: 900 18px "Barlow Condensed";
+  font: 900 14px "Barlow Condensed";
   color: #ffffff;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 .jackpot-info-col strong {
-  font: 900 48px/1 "Barlow Condensed";
+  font: 900 38px/1 "Barlow Condensed";
   color: #ffd700;
   text-shadow: 0 0 14px #ffbb00, 0 0 28px #ff7700;
 }
@@ -247,43 +247,43 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 14px 10px;
-  gap: 6px;
+  padding: 10px 8px;
+  gap: 4px;
   box-shadow: 0 0 16px rgba(0, 213, 255, 0.55), inset 0 0 15px rgba(0, 213, 255, 0.2);
-  min-height: 85px;
+  min-height: 70px;
 }
 .prize-line small {
-  font: 800 18px "Barlow Condensed";
+  font: 800 14px "Barlow Condensed";
   color: #ffffff;
-  letter-spacing: 1px;
+  letter-spacing: .8px;
   text-transform: uppercase;
   text-shadow: 0 0 8px rgba(255,255,255,0.3);
 }
 .prize-line strong {
-  font: 900 32px/1 "Barlow Condensed";
+  font: 900 26px/1 "Barlow Condensed";
   color: #ffffff;
   text-shadow: 0 0 12px rgba(255,255,255,0.9), 0 0 24px rgba(0, 213, 255, 0.7);
 }
-
+ 
 .info-squares-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 6px;
   margin-top: auto;
 }
 .info-sq {
   background: #011136;
   border: 1.5px solid #00d5ff;
   border-radius: 10px;
-  padding: 8px 10px;
+  padding: 6px 8px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   box-shadow: 0 0 12px rgba(0, 213, 255, 0.45), inset 0 0 8px rgba(0, 213, 255, 0.15);
 }
 .info-sq .info-icon {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
 }
 .info-sq .info-icon.green { color: #00ff66; filter: drop-shadow(0 0 6px #00ff66); }
@@ -292,7 +292,7 @@
 .info-sq .info-icon.gold { color: #ffd21f; filter: drop-shadow(0 0 6px #ffd21f); }
 .info-sq div { display: flex; flex-direction: column; }
 .info-sq small { font: 800 10px "Barlow Condensed"; color: #79b5ff; letter-spacing: .5px; }
-.info-sq b { font: 900 14px "Barlow Condensed"; color: #ffffff; }
+.info-sq b { font: 900 12px "Barlow Condensed"; color: #ffffff; }
 
 /* CENTER COLUMN: DRAW STAGE */
 .number-stage.panel {
@@ -330,12 +330,12 @@
   margin-bottom: auto;
 }
 .mega-ball {
-  width: 310px;
-  height: 310px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
-  border: 8px solid #00e5ff;
+  border: 6px solid #00e5ff;
   background: radial-gradient(circle at 50% 50%, #005ae6 0%, #002b94 65%, #001248 100%);
-  box-shadow: 0 0 40px #00e5ff, 0 0 80px rgba(0, 160, 255, 0.5), inset 0 0 50px rgba(0, 120, 255, 0.8);
+  box-shadow: 0 0 35px #00e5ff, 0 0 60px rgba(0, 160, 255, 0.5), inset 0 0 40px rgba(0, 120, 255, 0.8);
   display: grid;
   place-items: center;
   position: relative;
@@ -343,21 +343,21 @@
 .mega-ball:before {
   content: "";
   position: absolute;
-  inset: -18px;
+  inset: -14px;
   border: 4px dotted #80f0ff;
   border-radius: 50%;
   filter: drop-shadow(0 0 10px #00e5ff);
   animation: spin 18s linear infinite;
 }
 .mega-ball span {
-  font: 900 170px/1 "Barlow Condensed";
+  font: 900 140px/1 "Barlow Condensed";
   color: #ffffff;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 255, 255, 0.5);
 }
 .next-numbers-stack {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   align-items: center;
   position: absolute;
   right: 15px;
@@ -365,12 +365,12 @@
   transform: translateY(-50%);
 }
 .next-ball-3d {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font: 900 28px "Barlow Condensed";
+  font: 900 24px "Barlow Condensed";
   color: #ffffff;
   text-shadow: 0 2px 4px #000;
   box-shadow: 0 4px 12px rgba(0,0,0,.5);
@@ -382,8 +382,8 @@
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
-  padding: 6px 20px;
-  min-height: 105px;
+  padding: 6px 16px;
+  min-height: 80px;
   background: rgba(1, 14, 48, 0.75) !important;
   border: 2px solid #00d5ff !important;
   border-radius: 14px;
@@ -392,22 +392,22 @@
 .next-timer-box {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 .timer-icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
   background: linear-gradient(135deg, #ffd700, #b8860b);
-  box-shadow: 0 0 14px rgba(255, 215, 0, 0.7);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
   flex-shrink: 0;
 }
 .timer-icon-wrap .timer-icon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   color: #031c52;
   display: block;
 }
@@ -418,7 +418,7 @@
   justify-content: center;
 }
 .timer-text-col span {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: 1.2px;
@@ -427,7 +427,7 @@
 }
 .live-timer-countdown {
   color: #ffd700 !important;
-  font-size: 46px !important;
+  font-size: 38px !important;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 900;
   text-shadow: 0 0 14px #ffaa00, 0 0 28px #ff6600;
@@ -436,8 +436,8 @@
 }
 .bingo-cage-graphic {
   position: relative;
-  width: 140px;
-  height: 110px;
+  width: 110px;
+  height: 85px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -459,8 +459,8 @@
 .players-head {
   background: linear-gradient(90deg, #094ab4, #042767);
   color: #ffffff;
-  font: 800 13px "Barlow Condensed";
-  padding: 10px 14px;
+  font: 800 12px "Barlow Condensed";
+  padding: 8px 10px;
   border-radius: 8px;
   display: grid;
   grid-template-columns: 75px 1fr 130px;
@@ -485,14 +485,15 @@
 .player-row {
   background: #ffffff;
   color: #041f54;
-  margin-top: 5px;
-  padding: 8px 12px;
+  margin-top: 4px;
+  padding: 5px 10px;
   border-radius: 8px;
   display: grid;
   grid-template-columns: 75px 1fr 130px;
   align-items: center;
   text-align: center;
   font-weight: 700;
+  font-size: 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,.15);
   transition: transform .15s;
 }
@@ -591,30 +592,30 @@
 
 /* BOTTOM COLUMN: ÚLTIMOS NÚMEROS SORTEADOS */
 .ball-history.panel {
-  padding: 14px 20px;
+  padding: 8px 14px;
   position: relative;
 }
 .ball-history h2 {
   text-align: center;
   color: #ffffff;
-  font: 900 22px "Barlow Condensed";
-  margin: 0 0 12px;
+  font: 900 18px "Barlow Condensed";
+  margin: 0 0 4px;
   letter-spacing: 1px;
   text-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 .balls-90-grid {
   display: grid;
   grid-template-columns: repeat(20, 1fr);
-  gap: 8px;
-  padding: 10px 0;
+  gap: 5px;
+  padding: 4px 0;
 }
 .ball-90-item {
-  width: 35px;
-  height: 35px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font: 800 13px "Barlow Condensed", sans-serif;
+  font: 800 11px "Barlow Condensed", sans-serif;
   transition: transform .15s;
   margin: auto;
 }

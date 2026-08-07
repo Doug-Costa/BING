@@ -6,7 +6,7 @@ export function Logo() {
       <img
         src="/theme-bingo-show/logos/logo-main.png"
         alt="Bingo Show"
-        style={{ height: "115px", width: "auto", maxWidth: "100%" }}
+        style={{ height: "70px", width: "auto", maxWidth: "100%" }}
       />
     </Link>
   );
