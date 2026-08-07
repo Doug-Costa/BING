@@ -379,59 +379,75 @@
 
 .stage-footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: auto;
-  padding-top: 10px;
+  padding: 10px 24px;
+  background: linear-gradient(180deg, #0747ac 0%, #03216b 100%) !important;
+  border: 2px solid #00d5ff !important;
+  border-radius: 14px;
+  box-shadow: 0 0 22px rgba(0, 213, 255, 0.6), inset 0 0 15px rgba(0, 213, 255, 0.25) !important;
 }
 .next-timer-box {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.timer-icon-wrap {
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  border: 2px solid #00d5ff !important;
-  border-radius: 12px;
-  background: rgba(1, 14, 48, 0.75) !important;
-  padding: 12px 24px;
-  color: #fff;
-  font: 800 15px "Barlow Condensed";
-  box-shadow: 0 0 18px rgba(0, 213, 255, 0.5), inset 0 0 15px rgba(0, 213, 255, 0.2) !important;
-  min-width: 220px;
-  text-align: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffd700, #b8860b);
+  box-shadow: 0 0 14px rgba(255, 215, 0, 0.7);
+  flex-shrink: 0;
 }
-.next-timer-box span {
-  font-size: 13px;
+.timer-icon-wrap .timer-icon {
+  width: 30px;
+  height: 30px;
+  color: #031c52;
+  display: block;
+}
+.timer-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.timer-text-col span {
+  font-size: 14px;
+  font-weight: 800;
   color: #ffffff;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  text-shadow: 0 0 8px rgba(255,255,255,0.4);
-}
-.next-timer-box .timer-icon {
-  display: none;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 .live-timer-countdown {
   color: #ffd700 !important;
-  font-size: 52px !important;
+  font-size: 46px !important;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 900;
-  text-shadow: 0 0 16px #ffaa00, 0 0 32px #ff6600;
-  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  text-shadow: 0 0 14px #ffaa00, 0 0 28px #ff6600;
   line-height: 1;
   margin: 0 !important;
 }
 .bingo-cage-graphic {
   position: relative;
   width: 140px;
-  height: 120px;
+  height: 95px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
 }
 .bingo-cage-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   mix-blend-mode: screen;
   filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.5));
 }

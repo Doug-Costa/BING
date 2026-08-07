@@ -371,11 +371,15 @@ export default function LivePage() {
                   })}
                 </div>
               </div>
-              <div className="stage-footer">
+              <div className="stage-footer panel">
                 <div className="next-timer-box">
-                  <Hourglass className="timer-icon" />
-                  <span>PRÓXIMO NÚMERO EM</span>
-                  <b className="live-timer-countdown">00:30</b>
+                  <div className="timer-icon-wrap">
+                    <Hourglass className="timer-icon" />
+                  </div>
+                  <div className="timer-text-col">
+                    <span>PRÓXIMO NÚMERO EM</span>
+                    <b className="live-timer-countdown">00:30</b>
+                  </div>
                 </div>
                 <div className="bingo-cage-graphic">
                   <img src="/theme-bingo-show/bingo-cage.jpg" alt="Globo de Bingo Dourado" className="bingo-cage-img" />
