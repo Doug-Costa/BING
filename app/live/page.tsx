@@ -478,11 +478,6 @@ export default function LivePage() {
               ))}
             </div>
           </section>
-
-          {/* BOTTOM RIGHT CORNER ACCENT */}
-          <div className="luck-accent-banner">
-            <img src="/theme-bingo-show/banner-luck.png" alt="Aqui é Sorte! Todo dia!" className="luck-banner-img" />
-          </div>
         </div>
       </section>
 
