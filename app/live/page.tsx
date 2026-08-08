@@ -432,7 +432,7 @@ export default function LivePage() {
               <b>FALTAM <span className="head-rings"><i/><i/><i/><i/><i/></span></b>
             </div>
             {orderedTopWinners.length ? (
-              orderedTopWinners.map(({ item, left, key, missing }) => (
+              orderedTopWinners.slice(0, 7).map(({ item, left, key, missing }) => (
                 <div className="player-row" key={key}>
                   <b className="cupom-code">{item.ticketId ? String(item.ticketId).slice(-6).padStart(6, "0") : "000476"}</b>
                   <strong className="doador-name">
