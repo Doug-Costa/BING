@@ -193,15 +193,13 @@ export default function LivePage() {
             const status = String(ticket.status || "").toUpperCase();
             return sameDraw && !["COMPLETED","CANCELLED","CANCELED","REFUNDED"].includes(status);
           });
-          if (activeTickets.length) {
-            setCards(activeTickets.flatMap((ticket: { id?: string; ticketId?: string; numbers?: { numbers: Card }[] },ticketIndex: number) =>
-              (ticket.numbers || []).map((item,cardIndex) => ({
-                id: `${ticket.id || ticket.ticketId || ticketIndex}-${cardIndex}`,
-                ticketId: String(ticket.id || ticket.ticketId || ""),
-                numbers: item.numbers
-              }))
-            ));
-          }
+          setCards(activeTickets.flatMap((ticket: { id?: string; ticketId?: string; numbers?: { numbers: Card }[] },ticketIndex: number) =>
+            (ticket.numbers || []).map((item,cardIndex) => ({
+              id: `${ticket.id || ticket.ticketId || ticketIndex}-${cardIndex}`,
+              ticketId: String(ticket.id || ticket.ticketId || ""),
+              numbers: item.numbers
+            }))
+          ));
         }
         if (type === "draw_start") {
           const drawId = String(data.drawId ?? data.id ?? "");
@@ -269,6 +267,21 @@ export default function LivePage() {
   const lastBalls = useMemo(() => balls.slice(-3).reverse(), [balls]);
   const ballSet = useMemo(() => new Set(balls), [balls]);
   const orderedCards = useMemo(() => [...cards].sort((a,b) => remaining(a.numbers,ballSet) - remaining(b.numbers,ballSet)), [cards,ballSet]);
+  const displayCards = useMemo(() => {
+    const result: { id: string; ticketId?: string; numbers: Card }[] = [];
+    for (let i = 0; i < 4; i++) {
+      if (orderedCards[i]) {
+        result.push(orderedCards[i]);
+      } else {
+        result.push({
+          id: `placeholder-${i}`,
+          ticketId: `demo-${i}`,
+          numbers: demoCards[i % demoCards.length]
+        });
+      }
+    }
+    return result;
+  }, [orderedCards]);
   const orderedTopWinners = useMemo(() => normalizeTopWinners(topWinners, ballSet, topWinnersStage), [topWinners, ballSet, topWinnersStage]);
 
   return (
@@ -441,16 +454,30 @@ export default function LivePage() {
           </aside>
 
           {/* RIGHT BOTTOM COLUMN: MINHAS CARTELAS */}
-          {!!orderedCards.length && (
-            <section className="my-cards panel">
-              <h2>☘ MINHAS CARTELAS ☘</h2>
-              <div className="cards-grid-2x2">
-                {orderedCards.map((card, index) => (
-                  <BingoCard card={card.numbers} index={index} balls={ballSet} urgent={remaining(card.numbers, ballSet) <= 2} key={card.id} />
-                ))}
-              </div>
-            </section>
-          )}
+          <section className="my-cards panel">
+            <h2>
+              <span className="clover-group">
+                <Clover className="clover-icon" />
+                <Clover className="clover-icon" />
+              </span>
+              <span>MINHAS CARTELAS</span>
+              <span className="clover-group">
+                <Clover className="clover-icon" />
+                <Clover className="clover-icon" />
+              </span>
+            </h2>
+            <div className="cards-grid-2x2">
+              {displayCards.map((card, index) => (
+                <BingoCard
+                  card={card.numbers}
+                  index={index}
+                  balls={ballSet}
+                  urgent={card.numbers ? remaining(card.numbers, ballSet) <= 2 : false}
+                  key={card.id || `card-${index}`}
+                />
+              ))}
+            </div>
+          </section>
 
           {/* BOTTOM RIGHT CORNER ACCENT */}
           <div className="luck-accent-banner">
@@ -473,13 +500,15 @@ export default function LivePage() {
 const BingoCard = memo(function BingoCard({ card, index, balls, urgent }: { card: Card; index: number; balls: Set<number>; urgent?: boolean }) {
   return (
     <article className={`bingo-card ${urgent ? "urgent-card" : ""}`}>
-      <strong className="card-header-badge">CARTELA {String(index + 1).padStart(2, "0")}</strong>
-      <div className="card-cells-grid">
-        {card.flat().map((number, i) => (
-          <span className={number && balls.has(number) ? "marked" : number === 0 ? "free-star" : ""} key={i}>
-            {number ? String(number).padStart(2, "0") : "⭐"}
-          </span>
-        ))}
+      <div className="bingo-card-inner">
+        <strong className="card-header-badge">CARTELA {String(index + 1).padStart(2, "0")}</strong>
+        <div className="card-cells-grid">
+          {card.flat().map((number, i) => (
+            <span className={number && balls.has(number) ? "marked" : (number === 0 || i === 7) ? "free-star" : ""} key={i}>
+              {i === 7 || number === 0 ? "⭐" : String(number).padStart(2, "0")}
+            </span>
+          ))}
+        </div>
       </div>
     </article>
   );
