@@ -20,7 +20,7 @@ import { Header } from './header';
 import { AuthModal } from './auth-modal';
 import { DrawList } from './draw-list';
 import { useApp } from './app-provider';
-import { SiteFooter } from './site-footer';
+
 import { telegramLogin, seamlessLogin } from '@/lib/api';
 
 const winners = [
@@ -227,7 +227,7 @@ export function HomePage() {
             </Link>
           </article>
         </section>
-        <SiteFooter />
+
       </main>
       <AuthModal />
     </>
