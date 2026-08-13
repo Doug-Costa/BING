@@ -18,10 +18,10 @@ type PendingWinnerGroup = { timer: ReturnType<typeof setTimeout>; line: number; 
 
 const demoBalls = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,78,79,80,81,82,83,84,85,86,87,88,89,90];
 const demoCards: Card[] = [
-  [[3,17,34,49,61],[8,21,0,53,70],[11,26,38,57,74]],
-  [[2,18,33,47,65],[7,22,0,54,73],[12,29,39,58,77]],
-  [[1,16,32,48,63],[6,20,0,52,71],[15,25,36,55,76]],
-  [[4,19,35,50,66],[9,23,0,56,72],[13,28,37,59,78]]
+  [[3,17,34,49,61],[8,21,37,53,70],[11,26,38,57,74]],
+  [[2,18,33,47,65],[7,22,35,54,73],[12,29,39,58,77]],
+  [[1,16,32,48,63],[6,20,36,52,71],[15,25,40,55,76]],
+  [[4,19,35,50,66],[9,23,44,56,72],[13,28,45,59,78]]
 ];
 
 const demoTopWinners: CloseWinner[] = [
@@ -499,8 +499,8 @@ const BingoCard = memo(function BingoCard({ card, index, balls, urgent }: { card
         <strong className="card-header-badge">CARTELA {String(index + 1).padStart(2, "0")}</strong>
         <div className="card-cells-grid">
           {card.flat().map((number, i) => (
-            <span className={number && balls.has(number) ? "marked" : (number === 0 || i === 7) ? "free-star" : ""} key={i}>
-              {i === 7 || number === 0 ? "⭐" : String(number).padStart(2, "0")}
+            <span className={number && balls.has(number) ? "marked" : ""} key={i}>
+              {String(number || "").padStart(2, "0")}
             </span>
           ))}
         </div>
