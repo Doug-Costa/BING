@@ -567,13 +567,31 @@
 .my-cards h2 .clover-group {
   display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
-.my-cards h2 svg {
-  width: 20px;
-  height: 20px;
-  color: #00e676;
-  filter: drop-shadow(0 0 6px #00ff66) drop-shadow(0 2px 3px #020b24);
+.clover-img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.95)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+  transition: transform 0.3s ease;
+}
+.clover-img:hover {
+  transform: scale(1.15) rotate(10deg);
+}
+.title-trevo-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin: 0 6px;
+  filter: drop-shadow(0 0 8px rgba(0, 230, 118, 0.9));
+}
+.info-icon-img.trevo-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.95));
 }
 .cards-grid-2x2 {
   display: grid;

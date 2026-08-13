@@ -332,7 +332,7 @@ export default function LivePage() {
               ))}
               <div className="info-squares-grid">
                 <div className="info-sq">
-                  <Clover className="info-icon green" />
+                  <img src="/theme-bingo-show/trevo.png" alt="Trevo" className="info-icon-img trevo-img" />
                   <div>
                     <small>SORTEIO</small>
                     <b>{currentDrawIdRef.current ? currentDrawIdRef.current.slice(-6) : "465149"}</b>
@@ -403,7 +403,7 @@ export default function LivePage() {
 
           {/* BOTTOM FULL-WIDTH COLUMN: ÚLTIMOS NÚMEROS SORTEADOS */}
           <section className="ball-history panel">
-            <h2>☘ ÚLTIMOS NÚMEROS SORTEADOS ☘</h2>
+            <h2><img src="/theme-bingo-show/trevo.png" alt="Trevo" className="title-trevo-img" /> ÚLTIMOS NÚMEROS SORTEADOS <img src="/theme-bingo-show/trevo.png" alt="Trevo" className="title-trevo-img" /></h2>
             <div className="balls-90-grid">
               {Array.from({ length: 90 }, (_, index) => index + 1).map(number => {
                 const isDrawn = ballSet.has(number);
@@ -457,13 +457,13 @@ export default function LivePage() {
           <section className="my-cards panel">
             <h2>
               <span className="clover-group">
-                <Clover className="clover-icon" />
-                <Clover className="clover-icon" />
+                <img src="/theme-bingo-show/trevo.png" alt="Trevo" className="clover-img" />
+                <img src="/theme-bingo-show/trevo.png" alt="Trevo" className="clover-img" />
               </span>
               <span>MINHAS CARTELAS</span>
               <span className="clover-group">
-                <Clover className="clover-icon" />
-                <Clover className="clover-icon" />
+                <img src="/theme-bingo-show/trevo.png" alt="Trevo" className="clover-img" />
+                <img src="/theme-bingo-show/trevo.png" alt="Trevo" className="clover-img" />
               </span>
             </h2>
             <div className="cards-grid-2x2">
