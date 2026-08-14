@@ -183,28 +183,32 @@
 .live-board {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 15px;
-  margin-bottom: 18px;
-  align-items: start;
+  gap: 18px;
+  margin-bottom: 24px;
+  align-items: stretch;
 }
 .live-left-center-block,
 .live-right-block {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
+  height: 100%;
 }
 .live-left-center-top {
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 15px;
+  grid-template-columns: 1fr 1.65fr;
+  gap: 18px;
+  height: 100%;
 }
 
 /* LEFT PANEL: PRIZES & ACUMULADO */
 .prizes.panel {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 12px;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  height: 100%;
 }
 .jackpot-live {
   border: 3px solid #00d5ff;
@@ -213,14 +217,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  padding: 12px 14px;
+  gap: 16px;
+  padding: 14px 16px;
   box-shadow: 0 0 20px rgba(0,213,255,0.55), inset 0 0 22px rgba(0,213,255,0.25);
-  min-height: 105px;
+  min-height: 118px;
 }
 .jackpot-icon-img {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   filter: drop-shadow(0 0 10px #ffd21f);
 }
 .jackpot-info-col {
@@ -229,14 +233,14 @@
   justify-content: center;
 }
 .jackpot-info-col small {
-  font: 900 14px "Barlow Condensed";
+  font: 900 15px "Barlow Condensed";
   color: #ffffff;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
 .jackpot-info-col strong {
-  font: 900 38px/1 "Barlow Condensed";
+  font: 900 44px/1 "Barlow Condensed";
   color: #ffd700;
   text-shadow: 0 0 14px #ffbb00, 0 0 28px #ff7700;
 }
@@ -248,20 +252,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 8px;
-  gap: 4px;
+  padding: 12px 10px;
+  gap: 5px;
   box-shadow: 0 0 16px rgba(0, 213, 255, 0.55), inset 0 0 15px rgba(0, 213, 255, 0.2);
-  min-height: 70px;
+  min-height: 82px;
+  flex: 1;
 }
 .prize-line small {
-  font: 800 14px "Barlow Condensed";
+  font: 800 15px "Barlow Condensed";
   color: #ffffff;
   letter-spacing: .8px;
   text-transform: uppercase;
   text-shadow: 0 0 8px rgba(255,255,255,0.3);
 }
 .prize-line strong {
-  font: 900 26px/1 "Barlow Condensed";
+  font: 900 29px/1 "Barlow Condensed";
   color: #ffffff;
   text-shadow: 0 0 12px rgba(255,255,255,0.9), 0 0 24px rgba(0, 213, 255, 0.7);
 }
@@ -269,22 +274,22 @@
 .info-squares-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: 8px;
   margin-top: auto;
 }
 .info-sq {
   background: #011136;
   border: 1.5px solid #00d5ff;
   border-radius: 10px;
-  padding: 6px 8px;
+  padding: 8px 10px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   box-shadow: 0 0 12px rgba(0, 213, 255, 0.45), inset 0 0 8px rgba(0, 213, 255, 0.15);
 }
 .info-sq .info-icon {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
 }
 .info-sq .info-icon.green { color: #00ff66; filter: drop-shadow(0 0 6px #00ff66); }
@@ -292,22 +297,25 @@
 .info-sq .info-icon.blue { color: #33a0ff; filter: drop-shadow(0 0 6px #33a0ff); }
 .info-sq .info-icon.gold { color: #ffd21f; filter: drop-shadow(0 0 6px #ffd21f); }
 .info-sq .info-icon-img.clock-img {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
   filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.7));
   flex-shrink: 0;
 }
 .info-sq div { display: flex; flex-direction: column; }
-.info-sq small { font: 800 10px "Barlow Condensed"; color: #79b5ff; letter-spacing: .5px; }
-.info-sq b { font: 900 12px "Barlow Condensed"; color: #ffffff; }
+.info-sq small { font: 800 11px "Barlow Condensed"; color: #79b5ff; letter-spacing: .5px; }
+.info-sq b { font: 900 13px "Barlow Condensed"; color: #ffffff; }
 
 /* CENTER COLUMN: DRAW STAGE */
 .number-stage.panel {
   position: relative;
-  padding: 14px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 500px;
   background: radial-gradient(circle at 50% 45%, #1274f2 0%, #0a4cbd 35%, #042775 70%, #021548 100%) !important;
   border: 2px solid #00e5ff !important;
   box-shadow: 0 0 25px rgba(0, 229, 255, 0.8), inset 0 0 30px rgba(0, 180, 255, 0.5) !important;
@@ -334,14 +342,14 @@
   z-index: 2;
 }
 .stage-header h2 {
-  font: 900 22px "Barlow Condensed";
+  font: 900 24px "Barlow Condensed";
   margin: 0;
   letter-spacing: 1px;
   color: #ffd700;
   text-shadow: 0 0 12px #ffaa00, 0 0 24px #ff6600;
 }
 .stage-header .upcoming-label {
-  font: 800 12px "Barlow Condensed";
+  font: 800 13px "Barlow Condensed";
   color: #ffffff;
   letter-spacing: 1.5px;
   text-shadow: 0 0 8px rgba(255,255,255,0.4);
@@ -356,8 +364,8 @@
   margin-bottom: auto;
 }
 .mega-ball {
-  width: 270px;
-  height: 270px;
+  width: 295px;
+  height: 295px;
   border-radius: 50%;
   border: 6px solid #00e5ff;
   background: radial-gradient(circle at 45% 35%, #5ce4ff 0%, #0084ff 35%, #004ecc 70%, #00287a 100%);
@@ -377,18 +385,18 @@
   animation: spin 18s linear infinite;
 }
 .mega-ball span {
-  font: 900 140px/1 "Barlow Condensed";
+  font: 900 155px/1 "Barlow Condensed";
   color: #ffffff;
   text-shadow: 0 4px 18px rgba(0, 20, 60, 0.8), 0 0 35px rgba(255, 255, 255, 0.95), 0 0 12px #ffffff;
 }
 
 .mega-ball-backlight {
   position: absolute;
-  width: 320px;
-  height: 320px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(0, 229, 255, 0.55) 0%, rgba(255, 196, 0, 0.4) 45%, rgba(0, 213, 255, 0) 72%);
-  filter: blur(16px);
+  filter: blur(18px);
   z-index: 1;
   pointer-events: none;
   animation: backlightPulse 2.8s ease-in-out infinite alternate;
@@ -518,21 +526,21 @@
 .next-numbers-stack {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
   position: absolute;
-  right: 15px;
+  right: 18px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
 }
 .next-ball-3d {
-  width: 56px;
-  height: 56px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font: 900 24px "Barlow Condensed";
+  font: 900 27px "Barlow Condensed";
   color: #ffffff;
   text-shadow: 0 2px 4px #000;
   box-shadow: 0 4px 12px rgba(0,0,0,.5);
@@ -544,8 +552,8 @@
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
-  padding: 6px 16px;
-  min-height: 80px;
+  padding: 8px 18px;
+  min-height: 88px;
   background: rgba(1, 14, 48, 0.75) !important;
   border: 2px solid #00d5ff !important;
   border-radius: 14px;
@@ -560,16 +568,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 8px;
   background: linear-gradient(135deg, #ffd700, #b8860b);
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
   flex-shrink: 0;
 }
 .timer-icon-wrap .timer-icon {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   color: #031c52;
   display: block;
 }
@@ -580,7 +588,7 @@
   justify-content: center;
 }
 .timer-text-col span {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: 1.2px;
@@ -589,7 +597,7 @@
 }
 .live-timer-countdown {
   color: #ffd700 !important;
-  font-size: 38px !important;
+  font-size: 42px !important;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 900;
   text-shadow: 0 0 14px #ffaa00, 0 0 28px #ff6600;
@@ -598,8 +606,8 @@
 }
 .bingo-cage-graphic {
   position: relative;
-  width: 110px;
-  height: 85px;
+  width: 125px;
+  height: 95px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -614,15 +622,18 @@
 
 /* RIGHT TOP COLUMN: DOADOR / RANKING TABLE */
 .players.panel {
-  padding: 12px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  flex: 1.1;
+  min-height: 310px;
 }
 .players-head {
   background: linear-gradient(90deg, #094ab4, #042767);
   color: #ffffff;
-  font: 800 12px "Barlow Condensed";
-  padding: 8px 10px;
+  font: 800 13px "Barlow Condensed";
+  padding: 9px 12px;
   border-radius: 8px;
   display: grid;
   grid-template-columns: 75px 1fr 130px;
@@ -647,22 +658,22 @@
 .player-row {
   background: #ffffff;
   color: #041f54;
-  margin-top: 4px;
-  padding: 5px 10px;
+  margin-top: 5px;
+  padding: 7px 12px;
   border-radius: 8px;
   display: grid;
   grid-template-columns: 75px 1fr 130px;
   align-items: center;
   text-align: center;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   box-shadow: 0 2px 5px rgba(0,0,0,.15);
   transition: transform .15s;
 }
 .player-row:hover { transform: translateX(3px); }
-.cupom-code { color: #e52b21; font-family: monospace; font-size: 14px; font-weight: 900; }
+.cupom-code { color: #e52b21; font-family: monospace; font-size: 15px; font-weight: 900; }
 .doador-name {
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
@@ -674,8 +685,8 @@
 .doador-name small { color: #0077ff; font-size: 10px; }
 .missing-pills { display: flex; gap: 4px; justify-content: center; }
 .missing-pills i {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: #07357d;
   color: #ffd21f;
@@ -684,16 +695,20 @@
   place-items: center;
   font-style: normal;
   font-weight: 900;
-  font-size: 11px;
+  font-size: 12px;
   box-shadow: 0 1px 3px rgba(0,0,0,.3);
 }
 
 /* RIGHT BOTTOM COLUMN: MINHAS CARTELAS */
 .my-cards.panel {
-  padding: 12px 14px 14px;
+  padding: 16px 18px 18px;
   position: relative;
   border: 1.5px solid rgba(0, 213, 255, 0.6) !important;
   box-shadow: 0 0 18px rgba(0, 213, 255, 0.45), inset 0 0 15px rgba(0, 213, 255, 0.15) !important;
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .my-cards h2 {
   display: flex;
@@ -702,8 +717,8 @@
   gap: 8px;
   text-align: center;
   color: #ffffff;
-  font: 900 22px/1 "Barlow Condensed";
-  margin: 0 0 12px;
+  font: 900 24px/1 "Barlow Condensed";
+  margin: 0 0 14px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   text-shadow: 0 2px 4px #020b24, 0 0 10px #041640, 2px 2px 0px #041030;
@@ -714,8 +729,8 @@
   gap: 4px;
 }
 .clover-img {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.95)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
   transition: transform 0.3s ease;
@@ -724,52 +739,61 @@
   transform: scale(1.15) rotate(10deg);
 }
 .title-trevo-img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
   vertical-align: middle;
   margin: 0 6px;
   filter: drop-shadow(0 0 8px rgba(0, 230, 118, 0.9));
 }
 .info-icon-img.trevo-img {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.95));
 }
 .cards-grid-2x2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 14px;
+  flex: 1;
+  align-items: stretch;
 }
 .bingo-card {
   background: #ffffff !important;
   border: 3px solid #00d5ff !important;
   border-radius: 12px;
-  padding: 5px;
+  padding: 6px;
   position: relative;
   box-shadow: 0 0 20px rgba(0, 213, 255, 0.85), inset 0 0 14px rgba(0, 213, 255, 0.55) !important;
   transition: transform .35s ease, box-shadow .35s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .bingo-card-inner {
   border: 2px solid #0099ff;
   border-radius: 8px;
-  padding: 8px 8px 9px;
+  padding: 10px 10px 11px;
   background: #ffffff;
   box-shadow: 0 0 8px rgba(0, 153, 255, 0.4), inset 0 0 10px rgba(0, 153, 255, 0.35);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card-header-badge {
   display: block;
   width: max-content;
-  min-width: 105px;
-  margin: 0 auto 8px;
+  min-width: 110px;
+  margin: 0 auto 10px;
   text-align: center;
   background: linear-gradient(0deg, #d88e00 0%, #ffd000 65%, #fff685 100%) !important;
   color: #031640 !important;
   border: 1px solid #ffe600;
   border-radius: 6px;
-  padding: 4px 12px;
-  font: 900 13px/1 "Barlow Condensed";
+  padding: 5px 14px;
+  font: 900 14px/1 "Barlow Condensed";
   letter-spacing: 1px;
   text-shadow: none;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.9);
@@ -777,7 +801,8 @@
 .card-cells-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 5px;
+  gap: 6px;
+  flex: 1;
 }
 .card-cells-grid span {
   aspect-ratio: 1.18;
@@ -785,11 +810,11 @@
   color: #041c54 !important;
   border: 1px solid #c2d8f2 !important;
   border-top: 1.5px solid #ffffff !important;
-  border-radius: 6px;
+  border-radius: 7px;
   display: grid;
   place-items: center;
   font-weight: 900;
-  font-size: 14px;
+  font-size: 15px;
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 1), inset 0 -2.5px 3px rgba(3, 20, 60, 0.15), 0 1px 2px rgba(0,0,0,0.12);
 }
 .card-cells-grid span.marked {
