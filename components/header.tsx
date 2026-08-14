@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CalendarDays, Gift, Headphones, Home, LogOut, Menu, Radio, Ticket, UserRound, Volume2, VolumeX, X } from "lucide-react";
+import { CalendarDays, Gift, Headphones, Home, LogOut, Menu, Radio, Ticket, UserRound, Volume2, VolumeX, X, Settings } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Logo } from "./logo";
 import { useApp } from "./app-provider";
@@ -20,20 +20,40 @@ export function Header() {
     setUser(null); 
   };
 
+  useEffect(() => {
+    if (!menu) return;
+    const handleOutsideClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest(".nav-container")) {
+        setMenu(false);
+      }
+    };
+    document.addEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener("click", handleOutsideClick);
+  }, [menu]);
+
   return (
     <header className="header">
       <Logo />
-      <button className="menu-button" onClick={() => setMenu(!menu)} aria-label="Abrir menu">
-        {menu ? <X /> : <Menu />}
-      </button>
-      <nav className={menu ? "nav open" : "nav"} onClick={() => setMenu(false)}>
-        <Link href="/"><Home />Início</Link>
-        <Link href="/draws"><CalendarDays />Sorteios</Link>
-        <Link href="/tickets"><Ticket />Meus tickets</Link>
-        <Link href="/live"><Radio />Ao vivo</Link>
-        <a href="#promocoes"><Gift />Promoções</a>
-        <a href="#contato"><Headphones />Contato</a>
-      </nav>
+      <div className="nav-container">
+        <button 
+          className={`gear-button ${menu ? "active" : ""}`} 
+          onClick={() => setMenu(!menu)} 
+          aria-label="Menu de navegação"
+        >
+          <Settings />
+        </button>
+        {menu && (
+          <nav className="nav-dropdown" onClick={() => setMenu(false)}>
+            <Link href="/"><Home />Início</Link>
+            <Link href="/draws"><CalendarDays />Sorteios</Link>
+            <Link href="/tickets"><Ticket />Meus tickets</Link>
+            <Link href="/live"><Radio />Ao vivo</Link>
+            <a href="#promocoes"><Gift />Promoções</a>
+            <a href="#contato"><Headphones />Contato</a>
+          </nav>
+        )}
+      </div>
       <div className="account">
         {isLive && (
           <>
