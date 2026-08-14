@@ -52,6 +52,9 @@ export default function LivePage() {
   const [winnerNotice, setWinnerNotice] = useState<WinnerNotice | null>(null);
   const [summary, setSummary] = useState<DrawSummary | null>(null);
   const [connectionError, setConnectionError] = useState("");
+  const [jumpingBall, setJumpingBall] = useState<number | null>(null);
+  const [isEmerging, setIsEmerging] = useState<boolean>(false);
+  const [isStackShifting, setIsStackShifting] = useState<boolean>(false);
   const noticeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const finishTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const summaryDelayTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -208,6 +211,7 @@ export default function LivePage() {
           jackpotResultRef.current = { amount: 0, winners: [] };
           if (drawId) finishedDrawIdsRef.current.delete(drawId);
           setBalls([]); setCurrent(0); setTopWinners([]); setTopWinnersStage(1); setCards([]); setSummary(null); setWonLines([]); setDrawActive(true);
+          setJumpingBall(null); setIsEmerging(false); setIsStackShifting(false);
           setPrizes(normalizePrizes(data));
           setJackpot(safeNumber(data.jackpotAmount ?? data.value_jackpot ?? data.jackpot?.currentAmount));
           loadDrawValues(drawId);
@@ -215,6 +219,18 @@ export default function LivePage() {
         if (type === "new_ball") {
           const number = normalizeBall(data.number ?? data.ball ?? data.ballNumber);
           if (number) {
+            if (currentBallRef.current && currentBallRef.current !== number) {
+              const prevBall = currentBallRef.current;
+              setJumpingBall(prevBall);
+              setIsStackShifting(true);
+              setTimeout(() => {
+                setJumpingBall(null);
+                setIsStackShifting(false);
+              }, 750);
+            }
+            setIsEmerging(true);
+            setTimeout(() => setIsEmerging(false), 650);
+
             currentBallRef.current = number;
             setCurrent(number);
             setBalls(previous => previous.includes(number) ? previous : [...previous, number]);
@@ -264,7 +280,7 @@ export default function LivePage() {
     return () => stream.close();
   }, [user, demoMode]);
 
-  const lastBalls = useMemo(() => balls.slice(-3).reverse(), [balls]);
+  const lastBalls = useMemo(() => balls.slice(0, -1).slice(-3).reverse(), [balls]);
   const ballSet = useMemo(() => new Set(balls), [balls]);
   const orderedCards = useMemo(() => [...cards].sort((a,b) => remaining(a.numbers,ballSet) - remaining(b.numbers,ballSet)), [cards,ballSet]);
   const displayCards = useMemo(() => {
@@ -369,10 +385,18 @@ export default function LivePage() {
                 <span className="upcoming-label">PRÓXIMOS NÚMEROS</span>
               </div>
               <div className="stage-body">
-                <div className="mega-ball">
+                <div className="mega-ball-backlight" />
+                <div className={`mega-ball ${isEmerging ? "emerge" : ""}`}>
                   <span>{current || "—"}</span>
                 </div>
-                <div className="next-numbers-stack">
+
+                {jumpingBall !== null && (
+                  <div className={`jumping-ball-arc ${getBallColorClass(jumpingBall)}`}>
+                    <span>{jumpingBall}</span>
+                  </div>
+                )}
+
+                <div className={`next-numbers-stack ${isStackShifting ? "shifting" : ""}`}>
                   {(lastBalls.length ? lastBalls : [30, 65, 90]).slice(0, 3).map((number, index) => {
                     const isPlaceholder = lastBalls.length === 0;
                     const colorClass = isPlaceholder ? "undrawn" : getBallColorClass(number);
