@@ -1143,9 +1143,10 @@
 /* Premium glassmorphism dropdown menu */
 .nav-dropdown {
   position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 55px;
+  right: 0;
+  left: auto;
+  transform: none;
   width: 220px;
   background: rgba(3, 17, 48, 0.96);
   backdrop-filter: blur(16px);
@@ -1163,11 +1164,11 @@
 @keyframes dropdown-fade-in {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(-10px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -1217,7 +1218,7 @@
     height: 48px !important;
   }
   .nav-dropdown {
-    right: -40px;
+    right: 0;
     left: auto;
     transform: none;
   }

@@ -35,25 +35,7 @@ export function Header() {
   return (
     <header className="header">
       <Logo />
-      <div className="nav-container">
-        <button 
-          className={`gear-button ${menu ? "active" : ""}`} 
-          onClick={() => setMenu(!menu)} 
-          aria-label="Menu de navegação"
-        >
-          <Settings />
-        </button>
-        {menu && (
-          <nav className="nav-dropdown" onClick={() => setMenu(false)}>
-            <Link href="/"><Home />Início</Link>
-            <Link href="/draws"><CalendarDays />Sorteios</Link>
-            <Link href="/tickets"><Ticket />Meus tickets</Link>
-            <Link href="/live"><Radio />Ao vivo</Link>
-            <a href="#promocoes"><Gift />Promoções</a>
-            <a href="#contato"><Headphones />Contato</a>
-          </nav>
-        )}
-      </div>
+      <div className="header-spacer" />
       <div className="account">
         {isLive && (
           <>
@@ -82,6 +64,25 @@ export function Header() {
             <button className="btn btn-gold compact" onClick={() => openAuth("register")}>Cadastre-se</button>
           </>
         )}
+        <div className="nav-container">
+          <button 
+            className={`gear-button ${menu ? "active" : ""}`} 
+            onClick={() => setMenu(!menu)} 
+            aria-label="Menu de navegação"
+          >
+            <Settings />
+          </button>
+          {menu && (
+            <nav className="nav-dropdown" onClick={() => setMenu(false)}>
+              <Link href="/"><Home />Início</Link>
+              <Link href="/draws"><CalendarDays />Sorteios</Link>
+              <Link href="/tickets"><Ticket />Meus tickets</Link>
+              <Link href="/live"><Radio />Ao vivo</Link>
+              <a href="#promocoes"><Gift />Promoções</a>
+              <a href="#contato"><Headphones />Contato</a>
+            </nav>
+          )}
+        </div>
       </div>
     </header>
   );
