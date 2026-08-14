@@ -355,7 +355,7 @@ export default function LivePage() {
                   </div>
                 </div>
                 <div className="info-sq">
-                  <Heart className="info-icon cyan" />
+                  <img src="/theme-bingo-show/coracao.png" alt="Doação" className="info-icon-img heart-img" />
                   <div>
                     <small>DOAÇÃO</small>
                     <b>R$ 0,20</b>

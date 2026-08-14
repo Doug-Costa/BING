@@ -322,6 +322,13 @@
   filter: drop-shadow(0 0 8px rgba(0, 230, 118, 0.95));
   flex-shrink: 0;
 }
+.info-sq .info-icon-img.heart-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(255, 60, 60, 0.7));
+  flex-shrink: 0;
+}
 .info-sq div { display: flex; flex-direction: column; }
 .info-sq small { font: 800 13px "Barlow Condensed"; color: #79b5ff; letter-spacing: .5px; }
 .info-sq b { font: 900 16px "Barlow Condensed"; color: #ffffff; }
