@@ -55,6 +55,62 @@ export default function LivePage() {
   const [jumpingBall, setJumpingBall] = useState<number | null>(null);
   const [isEmerging, setIsEmerging] = useState<boolean>(false);
   const [isStackShifting, setIsStackShifting] = useState<boolean>(false);
+  const [nextDraw, setNextDraw] = useState<any | null>(null);
+  const [nextDrawTimeLeft, setNextDrawTimeLeft] = useState("");
+  const [secondsLeft, setSecondsLeft] = useState(30);
+
+  useEffect(() => {
+    const load = () =>
+      fetch("/api/next-draws", { cache: "no-store" })
+        .then(r => r.json())
+        .then(data => {
+          if (Array.isArray(data) && data.length > 0) {
+            const future = data
+              .filter((d: any) => new Date(d.scheduledAt).getTime() > Date.now())
+              .sort((a: any, b: any) => new Date(a.scheduledAt).getTime() - new Date(b.scheduledAt).getTime());
+            setNextDraw(future[0] || null);
+          }
+        })
+        .catch(() => {});
+    load();
+    const interval = setInterval(load, 20000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const update = () => {
+      if (drawActive) return;
+      if (!nextDraw) {
+        setNextDrawTimeLeft("--:--");
+        return;
+      }
+      const diff = new Date(nextDraw.scheduledAt).getTime() - Date.now();
+      if (diff <= 0) {
+        setNextDrawTimeLeft("00:00");
+        return;
+      }
+      const secs = Math.floor(diff / 1000);
+      const hours = Math.floor(secs / 3600);
+      const mins = Math.floor((secs % 3600) / 60);
+      const remainingSecs = secs % 60;
+      if (hours > 0) {
+        setNextDrawTimeLeft(`${String(hours).padStart(2, "0")}:${String(mins).padStart(2, "0")}:${String(remainingSecs).padStart(2, "0")}`);
+      } else {
+        setNextDrawTimeLeft(`${String(mins).padStart(2, "0")}:${String(remainingSecs).padStart(2, "0")}`);
+      }
+    };
+    update();
+    const clock = setInterval(update, 1000);
+    return () => clearInterval(clock);
+  }, [nextDraw, drawActive]);
+
+  useEffect(() => {
+    if (!drawActive) return;
+    const timer = setInterval(() => {
+      setSecondsLeft(prev => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [drawActive]);
   const noticeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const finishTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const summaryDelayTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -215,6 +271,7 @@ export default function LivePage() {
           setPrizes(normalizePrizes(data));
           setJackpot(safeNumber(data.jackpotAmount ?? data.value_jackpot ?? data.jackpot?.currentAmount));
           loadDrawValues(drawId);
+          setSecondsLeft(30);
         }
         if (type === "new_ball") {
           const number = normalizeBall(data.number ?? data.ball ?? data.ballNumber);
@@ -234,6 +291,7 @@ export default function LivePage() {
             currentBallRef.current = number;
             setCurrent(number);
             setBalls(previous => previous.includes(number) ? previous : [...previous, number]);
+            setSecondsLeft(30);
           }
         }
         if (type === "top_winners") {
@@ -411,11 +469,13 @@ export default function LivePage() {
               <div className="stage-footer panel">
                 <div className="next-timer-box">
                   <div className="timer-icon-wrap">
-                    <Hourglass className="timer-icon" />
+                    <img src="/theme-bingo-show/relogio_areia.png" alt="Ampulheta" className="hourglass-img" />
                   </div>
                   <div className="timer-text-col">
-                    <span>PRÓXIMO NÚMERO EM</span>
-                    <b className="live-timer-countdown">00:30</b>
+                    <span>{drawActive ? "PRÓXIMO NÚMERO EM" : "PRÓXIMO SORTEIO EM"}</span>
+                    <b className="live-timer-countdown">
+                      {drawActive ? `${String(Math.floor(secondsLeft / 60)).padStart(2, "0")}:${String(secondsLeft % 60).padStart(2, "0")}` : nextDrawTimeLeft}
+                    </b>
                   </div>
                 </div>
                 <div className="bingo-cage-graphic">

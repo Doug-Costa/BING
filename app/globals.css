@@ -594,18 +594,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #ffd700, #b8860b);
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
 }
-.timer-icon-wrap .timer-icon {
-  width: 26px;
-  height: 26px;
-  color: #031c52;
-  display: block;
+.timer-icon-wrap .hourglass-img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));
+  animation: hourglass-pulse 3s ease-in-out infinite;
+}
+
+@keyframes hourglass-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.5));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.9));
+    transform: scale(1.05);
+  }
 }
 .timer-text-col {
   display: flex;
