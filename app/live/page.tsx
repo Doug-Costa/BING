@@ -330,7 +330,7 @@ export default function LivePage() {
             {/* LEFT PANEL: ACUMULADO, PRÊMIOS, INFO SQUARES */}
             <aside className="prizes panel">
               <div className={`jackpot-live ${prizeState(0, wonLines, drawActive)}`}>
-                <img src="/theme-bingo-show/icons/icon-money-bag.svg" alt="Acumulado" className="jackpot-icon-img" />
+                <img src="/theme-bingo-show/icons/icon-money-bag.png" alt="Acumulado" className="jackpot-icon-img" />
                 <div className="jackpot-info-col">
                   <small>ACUMULADO</small>
                   <strong>{money(jackpot)}</strong>
