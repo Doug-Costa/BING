@@ -226,10 +226,10 @@ export default function LivePage() {
               setTimeout(() => {
                 setJumpingBall(null);
                 setIsStackShifting(false);
-              }, 750);
+              }, 1100);
             }
             setIsEmerging(true);
-            setTimeout(() => setIsEmerging(false), 650);
+            setTimeout(() => setIsEmerging(false), 950);
 
             currentBallRef.current = number;
             setCurrent(number);
