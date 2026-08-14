@@ -594,13 +594,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 68px;
+  height: 68px;
   flex-shrink: 0;
 }
 .timer-icon-wrap .hourglass-img {
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(0, 213, 255, 0.7));
   animation: hourglass-pulse 3s ease-in-out infinite;
