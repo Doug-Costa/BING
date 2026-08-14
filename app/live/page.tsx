@@ -369,7 +369,7 @@ export default function LivePage() {
                   </div>
                 </div>
                 <div className="info-sq">
-                  <Clock className="info-icon gold" />
+                  <img src="/theme-bingo-show/relogio.png" alt="Relógio" className="info-icon-img clock-img" />
                   <div>
                     <small>HORA</small>
                     <b>{new Date().toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit' })}</b>
