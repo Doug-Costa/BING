@@ -182,23 +182,28 @@
 .live-login{display:flex;justify-content:center;align-items:center;gap:12px;padding:9px;background:#652100;border:1px solid #ff8c2b;border-radius:8px;margin-bottom:10px}.live-login button{background:var(--gold);color:#111;border:0;padding:7px 16px;border-radius:6px;font-weight:800}
 .live-board {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2.1fr 1fr;
+  grid-template-rows: minmax(0, 1fr);
   gap: 18px;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   align-items: stretch;
+  flex: 1;
+  min-height: calc(100vh - 130px);
 }
 .live-left-center-block,
 .live-right-block {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
   height: 100%;
+  min-height: 0;
 }
 .live-left-center-top {
   display: grid;
   grid-template-columns: 1fr 1.65fr;
-  gap: 18px;
-  height: 100%;
+  gap: 16px;
+  flex: 1.45;
+  min-height: 0;
 }
 
 /* LEFT PANEL: PRIZES & ACUMULADO */
