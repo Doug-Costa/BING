@@ -362,7 +362,7 @@ export default function LivePage() {
                   </div>
                 </div>
                 <div className="info-sq">
-                  <CalendarDays className="info-icon blue" />
+                  <img src="/theme-bingo-show/calendario.png" alt="Calendário" className="info-icon-img calendar-img" />
                   <div>
                     <small>DATA</small>
                     <b>{new Date().toLocaleDateString("pt-BR")}</b>
