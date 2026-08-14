@@ -302,8 +302,8 @@
 .info-sq .info-icon.blue { color: #33a0ff; filter: drop-shadow(0 0 8px #33a0ff); }
 .info-sq .info-icon.gold { color: #ffd21f; filter: drop-shadow(0 0 8px #ffd21f); }
 .info-sq .info-icon-img.clock-img {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
   filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.7));
   flex-shrink: 0;
@@ -323,8 +323,8 @@
   flex-shrink: 0;
 }
 .info-sq .info-icon-img.heart-img {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
   filter: drop-shadow(0 0 6px rgba(255, 60, 60, 0.7));
   flex-shrink: 0;
