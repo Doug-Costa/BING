@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import type { AuthData } from "@/lib/types";
 import { refreshAccessToken } from "@/lib/api";
+import { ThemeProvider } from "@/lib/theme-context";
 import { MobileNav } from "./mobile-nav";
 import { PwaExperience } from "./pwa-experience";
 
@@ -27,7 +28,12 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const affiliate = new URLSearchParams(window.location.search).get("affiliate")?.trim();
-    if (affiliate) localStorage.setItem("bingo_affiliate_id", affiliate);
+    if (affiliate) {
+      localStorage.setItem("bingo_affiliate_id", affiliate);
+      try {
+        document.cookie = `bingo_affiliate_id=${encodeURIComponent(affiliate)};path=/;max-age=${30 * 24 * 60 * 60};SameSite=Lax`;
+      } catch {}
+    }
     const saved = localStorage.getItem("bingo_user");
     if (saved) try {
       const parsed = JSON.parse(saved) as AuthData;
@@ -47,7 +53,15 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const openAuth = (mode: "login" | "register") => { setAuthMode(mode); setAuthOpen(true); };
-  return <AppContext.Provider value={{ user, setUser, authOpen, setAuthOpen, authMode, openAuth, muted, setMuted }}>{children}<MobileNav /><PwaExperience /></AppContext.Provider>;
+  return (
+    <ThemeProvider defaultTheme="light">
+      <AppContext.Provider value={{ user, setUser, authOpen, setAuthOpen, authMode, openAuth, muted, setMuted }}>
+        {children}
+        <MobileNav />
+        <PwaExperience />
+      </AppContext.Provider>
+    </ThemeProvider>
+  );
 }
 
 function isExpired(token: string) {

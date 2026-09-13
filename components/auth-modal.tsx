@@ -23,7 +23,8 @@ export function AuthModal() {
       if (mode === "login") data = await login(String(form.get("email")), String(form.get("password")));
       else {
         const fromUrl = new URLSearchParams(location.search).get("affiliate")?.trim();
-        const affiliate = fromUrl || localStorage.getItem("bingo_affiliate_id") || process.env.NEXT_PUBLIC_DEFAULT_AFFILIATE || "";
+        const cookieAffiliate = typeof document !== "undefined" ? document.cookie.match(/bingo_affiliate_id=([^;]+)/)?.[1] : "";
+        const affiliate = fromUrl || localStorage.getItem("bingo_affiliate_id") || (cookieAffiliate ? decodeURIComponent(cookieAffiliate) : "") || process.env.NEXT_PUBLIC_DEFAULT_AFFILIATE || "";
         if (fromUrl) localStorage.setItem("bingo_affiliate_id", fromUrl);
         data = await api<AuthData>(`/auth/player/register${affiliate ? `?affiliate=${encodeURIComponent(affiliate)}` : ""}`, {
           method: "POST",
