@@ -1,33 +1,15 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState, useMemo } from "react";
+import { ThemeMode, ThemeOption, ThemeTokens } from "./theme/types";
+import { AVAILABLE_THEMES, resolveTheme } from "./theme/themes";
 
-export type ThemeMode = "light" | "blue";
-
-export interface ThemeOption {
-  id: ThemeMode;
-  name: string;
-  icon: string;
-  description: string;
-}
-
-export const AVAILABLE_THEMES: ThemeOption[] = [
-  {
-    id: "light",
-    name: "Tema Claro",
-    icon: "☀️",
-    description: "Visual moderno, limpo e vibrante",
-  },
-  {
-    id: "blue",
-    name: "Tema Azul Live",
-    icon: "🌌",
-    description: "Tema clássico e imersivo da sala ao vivo",
-  },
-];
+export * from "./theme/types";
+export { AVAILABLE_THEMES, resolveTheme } from "./theme/themes";
 
 interface ThemeContextType {
   theme: ThemeMode;
+  tokens: ThemeTokens;
   setTheme: (theme: ThemeMode) => void;
   toggleTheme: () => void;
   availableThemes: ThemeOption[];
@@ -47,7 +29,7 @@ export function ThemeProvider({
   useEffect(() => {
     try {
       const savedTheme = localStorage.getItem("bingo_theme") as ThemeMode | null;
-      if (savedTheme && (savedTheme === "light" || savedTheme === "blue")) {
+      if (savedTheme && (savedTheme === "light" || savedTheme === "blue" || savedTheme === "ouro")) {
         setThemeState(savedTheme);
         document.documentElement.setAttribute("data-theme", savedTheme);
       } else {
@@ -71,10 +53,13 @@ export function ThemeProvider({
     setTheme(next);
   };
 
+  const tokens = useMemo(() => resolveTheme(theme), [theme]);
+
   return (
     <ThemeContext.Provider
       value={{
         theme,
+        tokens,
         setTheme,
         toggleTheme,
         availableThemes: AVAILABLE_THEMES,
@@ -91,4 +76,9 @@ export function useTheme() {
     throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
+}
+
+export function useThemeTokens(): ThemeTokens {
+  const { tokens } = useTheme();
+  return tokens;
 }
