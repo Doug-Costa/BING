@@ -5,69 +5,76 @@ import { defaultTypography } from "./typography";
 
 export const temaBingoShow: ThemeTokens = {
   id: "blue",
-  name: "Tema Azul Live",
+  name: "Bingo Show Blue (Azul Live)",
   icon: "🌌",
-  description: "Tema clássico e imersivo da sala ao vivo",
+  description: "Tema imersivo espacial com iluminação neon e fundo escuro",
   mode: "dark",
   colors: colorsBingoShow,
   assets: bingoShowAssets,
   typography: defaultTypography,
 };
 
-export const temaLight: ThemeTokens = {
-  id: "light",
-  name: "Tema Claro",
-  icon: "☀️",
-  description: "Visual moderno, limpo e vibrante",
-  mode: "light",
-  colors: colorsLight,
-  assets: lightThemeAssets,
-  typography: defaultTypography,
-};
-
 export const temaOuro: ThemeTokens = {
   id: "ouro",
-  name: "Tema Ouro Imperial",
+  name: "Ouro Imperial VIP",
   icon: "👑",
-  description: "Visual luxuoso dourado",
+  description: "Visual nobre de alto luxo em dourado e âmbar",
   mode: "dark",
   colors: colorsOuro,
   assets: bingoShowAssets,
   typography: defaultTypography,
 };
 
+export const temaLight: ThemeTokens = {
+  id: "light",
+  name: "Tema Claro Web",
+  icon: "☀️",
+  description: "Visual claro, moderno e limpo para navegação web",
+  mode: "light",
+  colors: colorsLight,
+  assets: lightThemeAssets,
+  typography: defaultTypography,
+};
+
 export const AVAILABLE_THEMES: ThemeOption[] = [
   {
-    id: "light",
-    name: "Tema Claro",
-    icon: "☀️",
-    description: "Visual moderno, limpo e vibrante",
+    id: "blue",
+    name: "Bingo Show Blue (Azul Live)",
+    icon: "🌌",
+    description: "Tema imersivo espacial com iluminação neon e fundo escuro",
   },
   {
-    id: "blue",
-    name: "Tema Azul Live",
-    icon: "🌌",
-    description: "Tema clássico e imersivo da sala ao vivo",
+    id: "ouro",
+    name: "Ouro Imperial VIP",
+    icon: "👑",
+    description: "Visual nobre de alto luxo em dourado e âmbar",
+  },
+  {
+    id: "light",
+    name: "Tema Claro Web",
+    icon: "☀️",
+    description: "Visual claro, moderno e limpo para navegação web",
   },
 ];
 
 export const THEMES_MAP: Record<string, ThemeTokens> = {
-  light: temaLight,
   blue: temaBingoShow,
   "bingo-show": temaBingoShow,
+  "bingo-show-blue": temaBingoShow,
   ouro: temaOuro,
+  light: temaLight,
 };
 
 /**
  * Resolve o objeto ThemeTokens correspondente a partir de um ID, nome ou objeto.
- * Fallback padrão: temaLight (ou temaBingoShow se especificado).
+ * Fallback padrão: temaBingoShow (Azul Live).
  */
 export function resolveTheme(themeInput?: string | { id?: string; name?: string } | null): ThemeTokens {
-  if (!themeInput) return temaLight;
+  if (!themeInput) return temaBingoShow;
   
   const idOrName = typeof themeInput === "string" ? themeInput.toLowerCase() : (themeInput.id || themeInput.name || "").toLowerCase();
   
-  if (idOrName === "blue" || idOrName === "bingo-show" || idOrName === "live" || idOrName === "dark") {
+  if (idOrName === "blue" || idOrName === "bingo-show" || idOrName === "bingo-show-blue" || idOrName === "live" || idOrName === "dark") {
     return temaBingoShow;
   }
   
@@ -79,5 +86,5 @@ export function resolveTheme(themeInput?: string | { id?: string; name?: string 
     return temaLight;
   }
   
-  return THEMES_MAP[idOrName] || temaLight;
+  return THEMES_MAP[idOrName] || temaBingoShow;
 }

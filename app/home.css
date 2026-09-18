@@ -167,7 +167,7 @@ html[data-theme="blue"] .ambient-blob.b3 {
   z-index: 100;
   width: 100%;
   height: 80px;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(2, 8, 25, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
@@ -836,7 +836,7 @@ html[data-theme="blue"] .trust-chip {
 
 .floating-card {
   position: absolute;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(2, 8, 25, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 16px;
