@@ -14,10 +14,11 @@ interface ThemeLogoProps {
 
 export function ThemeLogo({
   variant = "main",
-  width = 160,
-  height = "auto",
+  width = "auto",
+  height = 44,
   className = "",
   alt = "Bingo Show",
+  style = {},
 }: ThemeLogoProps) {
   const tokens = useThemeTokens();
   const [hasError, setHasError] = useState(false);
@@ -29,6 +30,9 @@ export function ThemeLogo({
   if (variant === "glow" && tokens.assets.logos.glow) logoSrc = tokens.assets.logos.glow;
   if (variant === "transparent" && tokens.assets.logos.transparent) logoSrc = tokens.assets.logos.transparent;
 
+  const formattedHeight = typeof height === "number" ? `${height}px` : height;
+  const formattedWidth = typeof width === "number" ? `${width}px` : width;
+
   if (hasError) {
     // Fallback de texto estilizado se a imagem não carregar
     return (
@@ -37,13 +41,15 @@ export function ThemeLogo({
         style={{
           fontFamily: tokens.typography.fontHeading,
           fontWeight: tokens.typography.weights.black,
-          fontSize: "26px",
+          fontSize: "20px",
           color: tokens.colors.gold,
           textShadow: `0 0 10px ${tokens.colors.primary}`,
           letterSpacing: "1px",
           display: "inline-flex",
           alignItems: "center",
           gap: "4px",
+          height: formattedHeight,
+          ...style,
         }}
       >
         <span>BINGO</span>
@@ -56,16 +62,18 @@ export function ThemeLogo({
     <img
       src={logoSrc}
       alt={alt}
-      width={width}
-      height={height}
       className={`theme-logo-img ${className}`}
       onError={() => setHasError(true)}
       style={{
         display: "block",
         maxWidth: "100%",
-        height: height === "auto" ? "auto" : `${height}px`,
+        maxHeight: formattedHeight,
+        height: formattedHeight,
+        width: formattedWidth,
         objectFit: "contain",
+        ...style,
       }}
     />
   );
 }
+

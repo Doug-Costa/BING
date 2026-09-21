@@ -16,8 +16,8 @@ interface ThemeLogoProps {
 export function ThemeLogo({
   variant = "main",
   tokens,
-  width = 160,
-  height = "auto",
+  width = "auto",
+  height = 44,
   className = "",
   alt = "Bingo Show",
   style = {},
@@ -35,6 +35,9 @@ export function ThemeLogo({
   const primaryColor = tokens?.colors.primary || "#087FFC";
   const cyanColor = tokens?.colors.cyan || "#17c8ff";
 
+  const formattedHeight = typeof height === "number" ? `${height}px` : height;
+  const formattedWidth = typeof width === "number" ? `${width}px` : width;
+
   if (hasError) {
     return (
       <div
@@ -42,13 +45,14 @@ export function ThemeLogo({
         style={{
           fontFamily: fontHeading,
           fontWeight: 900,
-          fontSize: "26px",
+          fontSize: "20px",
           color: goldColor,
           textShadow: `0 0 10px ${primaryColor}`,
           letterSpacing: "1px",
           display: "inline-flex",
           alignItems: "center",
           gap: "4px",
+          height: formattedHeight,
           ...style,
         }}
       >
@@ -62,17 +66,18 @@ export function ThemeLogo({
     <img
       src={logoSrc}
       alt={alt}
-      width={width}
-      height={height}
       className={`theme-logo-img ${className}`}
       onError={() => setHasError(true)}
       style={{
         display: "block",
         maxWidth: "100%",
-        height: height === "auto" ? "auto" : `${height}px`,
+        maxHeight: formattedHeight,
+        height: formattedHeight,
+        width: formattedWidth,
         objectFit: "contain",
         ...style,
       }}
     />
   );
 }
+

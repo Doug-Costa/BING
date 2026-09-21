@@ -3,14 +3,22 @@
 import Link from "next/link";
 import { ThemeLogo } from "@/components/theme/ThemeLogo";
 
-export function Logo() {
+interface LogoProps {
+  className?: string;
+  height?: number | string;
+  variant?: "main" | "blue" | "gold" | "glow" | "transparent";
+}
+
+export function Logo({ className = "", height = 44, variant = "main" }: LogoProps) {
   return (
-    <Link className="brand" href="/" aria-label="Bingo Show - início">
+    <Link className={`brand ${className}`} href="/" aria-label="Bingo Show - início">
       <ThemeLogo
-        variant="main"
+        variant={variant}
         alt="Bingo Show"
-        style={{ height: "70px", width: "auto", maxWidth: "100%" }}
+        height={height}
+        width="auto"
       />
     </Link>
   );
 }
+

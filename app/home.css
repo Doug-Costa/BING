@@ -195,6 +195,39 @@ html[data-theme="blue"] .site-header {
 .header-logo-col {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.brand:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+.header-logo-col .brand img,
+.header-logo-col .theme-logo-img,
+.brand img,
+.theme-logo-img {
+  height: 42px;
+  max-height: 44px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+}
+
+.footer-brand-col .brand img,
+.footer-brand-col .theme-logo-img {
+  height: 38px;
+  max-height: 40px;
+  width: auto;
+  max-width: 150px;
 }
 
 .header-desktop-nav {
@@ -2514,6 +2547,15 @@ footer.site-footer,
     height: 70px;
   }
 
+  .header-logo-col .brand img,
+  .header-logo-col .theme-logo-img,
+  .brand img,
+  .theme-logo-img {
+    height: 36px;
+    max-height: 38px;
+    max-width: 140px;
+  }
+
   .home-main-content {
     padding: 16px 14px 60px;
     gap: 32px;
@@ -2640,6 +2682,15 @@ footer.site-footer,
 @media (max-width: 430px) {
   .home-hero-title {
     font-size: 28px;
+  }
+
+  .header-logo-col .brand img,
+  .header-logo-col .theme-logo-img,
+  .brand img,
+  .theme-logo-img {
+    height: 32px;
+    max-height: 34px;
+    max-width: 120px;
   }
 
   .header-inner {
